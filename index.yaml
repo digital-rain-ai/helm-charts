@@ -3,6 +3,16 @@ entries:
   opus:
   - apiVersion: v2
     appVersion: 1.1100.1
+    created: "2023-04-21T17:26:02.525135238Z"
+    description: A Helm chart for Kubernetes
+    digest: f39d24f642153a50a08b360b61edd51dba1c312400a76aeebf1585eb9bbfffcf
+    name: opus
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/opus-0.1.11/opus-0.1.11.tgz
+    version: 0.1.11
+  - apiVersion: v2
+    appVersion: 1.1100.1
     created: "2023-04-21T14:19:17.973890831Z"
     description: A Helm chart for Kubernetes
     digest: 416d50b99fc2cc21f68e5bf8267feed153fa777f588ef06c50a57d25f7602ea3
@@ -101,4 +111,14 @@ entries:
     urls:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/opus-0.1.1/opus-0.1.1.tgz
     version: 0.1.1
-generated: "2023-04-21T14:19:17.973941232Z"
+  ravendb-cluster:
+  - apiVersion: v1
+    appVersion: "5.3"
+    created: "2023-04-21T17:26:02.719057895Z"
+    description: Chart for RavenDB Cluster
+    digest: 75418bd9bc6e8850ea7148c9df52f187875d9a175af0cbdc5ee30d5c1daca53d
+    name: ravendb-cluster
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/ravendb-cluster-0.1.0/ravendb-cluster-0.1.0.tgz
+    version: 0.1.0
+generated: "2023-04-21T17:26:02.719107595Z"
