@@ -1,0 +1,22 @@
+{{- range .Values.nodeTags }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: "ravendb-{{ . | lower }}"
+  namespace: ravendb
+  labels:
+    app.kubernetes.io/name: ravendb
+    app.kubernetes.io/managed-by: {{ $.Release.Service }}
+    app.kubernetes.io/instance: {{ $.Release.Name }}
+    helm.sh/chart: "{{ $.Chart.Name }}-{{ $.Chart.Version | replace "+" "_" }}"
+spec:
+  ports:
+  - port: 443
+    name: https
+  - port: 38888
+    protocol: TCP
+    name: tcp
+  selector:
+    nodeTag: {{ . }}
+---
+{{- end }}

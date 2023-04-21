@@ -83,3 +83,7 @@ affinity: {}
 volumes: []
 
 volumeMounts: []
+
+env:
+  - name: "pathBase"
+    value: "/app"        

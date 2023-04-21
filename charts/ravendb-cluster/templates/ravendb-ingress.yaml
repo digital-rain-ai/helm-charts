@@ -1,0 +1,41 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ravendb 
+  namespace: ravendb
+  labels:
+    app.kubernetes.io/name: ravendb
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    helm.sh/chart: "{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}"
+  annotations:
+    ingress.kubernetes.io/backend-protocol: HTTPS
+    ingress.kubernetes.io/ssl-passthrough: "true"
+    nginx.ingress.kubernetes.io/backend-protocol: HTTPS
+    nginx.ingress.kubernetes.io/ssl-passthrough: "true"
+spec:
+  ingressClassName: {{ .Values.ingressClassName }}
+  rules:
+    {{- range .Values.nodeTags }}
+    - host: "{{ lower . }}.{{$.Values.domain}}"
+      http:
+        paths:
+          - pathType: Prefix
+            path: /
+            backend:
+              service: 
+                name: ravendb-{{ . | lower}}
+                port:
+                  number: 443
+
+    - host: "{{ lower . }}-tcp.{{$.Values.domain}}"
+      http:
+        paths:
+          - pathType: Prefix
+            path: /
+            backend:
+              service: 
+                name: ravendb-{{ . | lower }}
+                port:
+                  number: 38888
+    {{- end }}
