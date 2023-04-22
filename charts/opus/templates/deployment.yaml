@@ -50,6 +50,11 @@ spec:
             {{- toYaml . | nindent 12 }}
           {{- end }}
           env:
+            - name: "USERNAME"
+            valueFrom:
+              secretKeyRef:
+                key:  username
+                name: {{ .Release.Name }}-auth
           {{- with .Values.env }}
             {{- toYaml . | nindent 12 }}
           {{- end }}
