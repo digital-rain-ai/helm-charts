@@ -49,13 +49,8 @@ spec:
           volumeMounts:
             {{- toYaml . | nindent 12 }}
           {{- end }}
-          env:
-            - name: "USERNAME"
-            valueFrom:
-              secretKeyRef:
-                key:  username
-                name: {{ .Release.Name }}-auth
           {{- with .Values.env }}
+          env:
             {{- toYaml . | nindent 12 }}
           {{- end }}
           resources:
