@@ -3,6 +3,16 @@ entries:
   identity-server:
   - apiVersion: v2
     appVersion: 1.1107.1
+    created: "2023-04-23T18:14:52.345726614Z"
+    description: A Helm chart for Identity Server
+    digest: 16d6743ccdfdebfbb02d91f5f0d6df44d293f398f9b32301f9c4cab50bf65217
+    name: identity-server
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/identity-server-0.1.3/identity-server-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
+    appVersion: 1.1107.1
     created: "2023-04-22T13:25:28.229044759Z"
     description: A Helm chart for Identity Server
     digest: 9a96e579181696eea0cfff7f2e7aba7fc4c62d498dac5fa556a6b8227f43685b
@@ -22,6 +32,16 @@ entries:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/identity-server-0.1.1/identity-server-0.1.1.tgz
     version: 0.1.1
   opus:
+  - apiVersion: v2
+    appVersion: 1.1107.1
+    created: "2023-04-23T18:14:52.548249057Z"
+    description: A Helm chart for Opus
+    digest: e3fe62994b2ab18bfc44603273615497744172aba71713972a0bb1eaac8f9344
+    name: opus
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/opus-0.1.14/opus-0.1.14.tgz
+    version: 0.1.14
   - apiVersion: v2
     appVersion: 1.1107.1
     created: "2023-04-22T13:25:28.350879665Z"
@@ -155,6 +175,15 @@ entries:
   ravendb-cluster:
   - apiVersion: v1
     appVersion: "5.3"
+    created: "2023-04-23T18:14:52.764901086Z"
+    description: Chart for RavenDB Cluster
+    digest: ca7959adfd5eaed9f6948e515f72a00d826d9658719348a34af1f9306e1dd4e8
+    name: ravendb-cluster
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/ravendb-cluster-0.1.2/ravendb-cluster-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v1
+    appVersion: "5.3"
     created: "2023-04-22T12:23:03.686339105Z"
     description: Chart for RavenDB Cluster
     digest: 430ea5506dec02bd8babef6bd1984cdc53f7d65c986a24c297beae6ff71bd419
@@ -171,4 +200,4 @@ entries:
     urls:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/ravendb-cluster-0.1.0/ravendb-cluster-0.1.0.tgz
     version: 0.1.0
-generated: "2023-04-22T13:25:28.350991466Z"
+generated: "2023-04-23T18:14:52.765328588Z"
