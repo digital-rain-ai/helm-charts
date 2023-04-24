@@ -17,7 +17,7 @@ spec:
     - name: ravendb-setup-package
       secret:
         secretName: ravendb-setup-package
-  {{- with .Values.imagePullSecrets }}
+  {{- with $.Values.imagePullSecrets }}
   imagePullSecrets:
     {{- toYaml . | nindent 4 }}
   {{- end }}
