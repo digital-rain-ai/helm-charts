@@ -86,4 +86,4 @@ volumeMounts: []
 
 env:
   - name: "pathBase"
-    value: "/app"        
+    value: "/app"
