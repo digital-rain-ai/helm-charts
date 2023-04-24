@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: ravendb 
+  name: ravendb
   namespace: ravendb
   labels:
     app.kubernetes.io/name: ravendb
@@ -23,7 +23,7 @@ spec:
           - pathType: Prefix
             path: /
             backend:
-              service: 
+              service:
                 name: ravendb-{{ . | lower}}
                 port:
                   number: 443
@@ -34,7 +34,7 @@ spec:
           - pathType: Prefix
             path: /
             backend:
-              service: 
+              service:
                 name: ravendb-{{ . | lower }}
                 port:
                   number: 38888

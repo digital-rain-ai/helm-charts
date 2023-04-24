@@ -4,7 +4,7 @@ kind: StatefulSet
 metadata:
   name: "ravendb-{{ . | lower }}"
   namespace: ravendb
-  annotations: 
+  annotations:
     ingress.kubernetes.io/ssl-passthrough: "true"
   labels:
     app.kubernetes.io/name: ravendb
@@ -26,11 +26,14 @@ spec:
     spec:
       dnsPolicy: Default
       serviceAccountName: modify-config
-    
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
       initContainers:
       - name: "{{$.Chart.Name}}-init"
         # todo: use lighter distro to run the scripts
-        image: "ubuntu:latest"  
+        image: "ubuntu:latest"
         command: ["/bin/bash"]
         args: ["/ravendb/scripts/initialize-pod.sh"]
 

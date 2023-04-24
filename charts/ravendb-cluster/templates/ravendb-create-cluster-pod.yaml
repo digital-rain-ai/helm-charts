@@ -17,9 +17,13 @@ spec:
     - name: ravendb-setup-package
       secret:
         secretName: ravendb-setup-package
+  {{- with .Values.imagePullSecrets }}
+  imagePullSecrets:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
   containers:
   - name: main
-    image: "ravendb/ravendb:{{$.Values.ravenImageTag}}"
+    image: "ghcr.io/digital-rain-ai/ravendb:{{$.Values.ravenImageTag}}"
     imagePullPolicy: {{ $.Values.imagePullPolicy }}
     command: ["/bin/bash"]
     args: ["/ravendb/scripts/create-cluster.sh"]
