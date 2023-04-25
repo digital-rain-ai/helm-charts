@@ -26,10 +26,8 @@ spec:
     spec:
       dnsPolicy: Default
       serviceAccountName: modify-config
-      {{- with $.Values.imagePullSecrets }}
       imagePullSecrets:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
+        - name: image-pull-secret
       initContainers:
       - name: "{{$.Chart.Name}}-init"
         # todo: use lighter distro to run the scripts

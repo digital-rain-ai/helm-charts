@@ -17,10 +17,8 @@ spec:
     - name: ravendb-setup-package
       secret:
         secretName: ravendb-setup-package
-  {{- with $.Values.imagePullSecrets }}
   imagePullSecrets:
-    {{- toYaml . | nindent 4 }}
-  {{- end }}
+    - name: image-pull-secret
   containers:
   - name: main
     image: "ghcr.io/digital-rain-ai/ravendb:{{$.Values.ravenImageTag}}"
