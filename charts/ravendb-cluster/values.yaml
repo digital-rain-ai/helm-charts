@@ -13,7 +13,7 @@ domain: "ravendb.example.com"
 email: user@example.com
 setupMode: LetsEncrypt
 license: '{}'
-secretDockerConfigJson:
+imagePullSecrets: []
 
 # optional, for hackers
 environment:
