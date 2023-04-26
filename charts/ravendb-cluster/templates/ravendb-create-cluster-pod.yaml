@@ -25,7 +25,7 @@ spec:
   - name: main
     image: "ghcr.io/digital-rain-ai/ravendb:{{$.Values.ravenImageTag}}"
     imagePullPolicy: {{ $.Values.imagePullPolicy }}
-    command: ["/bin/bash"]
+    command: ["/bin/sh"]
     args: ["/ravendb/scripts/create-cluster.sh"]
     volumeMounts:
       - name: ravendb-scripts
