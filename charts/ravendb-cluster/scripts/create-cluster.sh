@@ -24,7 +24,7 @@ domain_name="$(cat /ravendb/scripts/domain)"
 
 
 echo "Converting server certificate .pfx file to .pem..."
-openssl pkcs12 -in "$(find ./*certificate*)" -password pass: -out cert.pem -nodes
+openssl pkcs12 -in "$(find ./*certificate*)" -passin pass: -out cert.pem -nodes
 
 echo "Discovering tags..."
 for i in ../* ; do
