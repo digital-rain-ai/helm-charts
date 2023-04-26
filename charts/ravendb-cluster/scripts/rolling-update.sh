@@ -1,4 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env sh
+
+# Seems like this script is meant to be executed manually
+
 # This script is executing rolling update and takes the new ravenImageTag value as an first argument
 # As a second argument pass path to your ravendb-cluster
 echo "Installing yq"
@@ -14,7 +17,7 @@ fi
 
 getPodsResult=$(kubectl get pods -n ravendb)
 if [ $? -ne 0 ]; then
-echo "Couldn't get " 
+echo "Couldn't get "
 exit 1
 fi
 
@@ -25,7 +28,7 @@ statefulsetname="$(echo "$pod"|cut -f 1-2 -d '-')"
 url="$(kubectl describe pod "$pod" -n ravendb | grep PublicServerUrl | head -1 | awk '{print $2}')"
 
 echo "Setting image $1 on the $pod"
-kubectl set image statefulset/"$statefulsetname" ravendb-container=ravendb/ravendb:"$1" -n ravendb
+kubectl set image statefulset/"$statefulsetname" ravendb-container=ghcr.io/digital-rain-ai/ravendb:"$1" -n ravendb
 
 status=""
 echo "Waiting for $pod..."

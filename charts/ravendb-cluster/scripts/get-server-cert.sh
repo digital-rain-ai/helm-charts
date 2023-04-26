@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env sh
 
 # get node tag
 node_tag="$(env | grep HOSTNAME | cut -f 2 -d '-')"

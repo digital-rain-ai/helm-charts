@@ -1,15 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env sh
 set -e
 
-apt-get update -qq
-apt-get install unzip curl sudo jq -qq
-
-echo "Installing kubectl..."
-cd /usr
-mkdir kubectl
-cd kubectl
-curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+apk add --update curl unzip jq sudo kubectl
 
 echo "Copying RavenDB setup package to /ravendb"
 cp "$(find /usr/ravendb/*.zip)" /ravendb/pack.zip

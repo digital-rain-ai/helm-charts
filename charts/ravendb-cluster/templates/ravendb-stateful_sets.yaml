@@ -32,9 +32,8 @@ spec:
       {{- end }}
       initContainers:
       - name: "{{$.Chart.Name}}-init"
-        # todo: use lighter distro to run the scripts
-        image: "ubuntu:latest"
-        command: ["/bin/bash"]
+        image: "alpine:3.17.3"
+        command: ["/bin/sh"]
         args: ["/ravendb/scripts/initialize-pod.sh"]
 
         volumeMounts:

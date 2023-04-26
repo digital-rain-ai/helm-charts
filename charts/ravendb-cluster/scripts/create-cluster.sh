@@ -1,11 +1,9 @@
-#!/bin/bash
+#!/usr/bin/env sh
 
 set -e
 
 echo "Installing prerequisites..."
-apt-get update
-apt-get install curl unzip jq -y
-
+apk add --update curl unzip jq openssl
 
 echo "Copying /ravendb/ravendb-setup-package-readonly/pack.zip to the /ravendb folder..."
 cp -v /ravendb/ravendb-setup-package/*.zip /ravendb/pack.zip
@@ -17,7 +15,7 @@ cd /ravendb
 unzip -qq pack.zip -d ./ravendb-setup-package-copy/ > /dev/null
 
 
-first_node_tag_caps="$(find ravendb-setup-package-copy -maxdepth 1 -type d -printf '%P\n' | head -2 | tail -1)" 
+first_node_tag_caps="$(find ravendb-setup-package-copy -maxdepth 1 -type d -printf '%P\n' | head -2 | tail -1)"
 cd "ravendb-setup-package-copy/${first_node_tag_caps}"
 
 urls=()
@@ -78,5 +76,5 @@ done
 
 echo "Registering admin client certificate..."
 node_tag_upper="$(echo "${tags[0]}" | tr '[:lower:]' '[:upper:]')"
-/opt/RavenDB/Server/rvn put-client-certificate \
+/app/RavenDB/Server/rvn put-client-certificate \
     "https://${tags[0]}.$domain_name" /ravendb/ravendb-setup-package-copy/"$node_tag_upper"/*.pfx /ravendb/ravendb-setup-package-copy/admin.client.certificate.*.pfx
