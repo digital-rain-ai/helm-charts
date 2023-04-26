@@ -6,8 +6,23 @@ function update_secret {
     read -re new_cert
 
     # install depts
-    echo "Installing curl sudo jq and kubectl..."
-    apk add --update curl jq sudo kubectl
+    echo "Installing curl sudo and jq..."
+    apk add --update curl jq sudo
+
+    case `uname -m` in
+        x86_64) ARCH=amd64; ;;
+        armv7l) ARCH=arm; ;;
+        aarch64) ARCH=arm64; ;;
+        ppc64le) ARCH=ppc64le; ;;
+        s390x) ARCH=s390x; ;;
+        *) echo "un-supported arch, exit ..."; exit 1; ;;
+    esac
+
+    KUBECTL_VERSION=1.26.3
+
+    curl -sLO https://storage.googleapis.com/kubernetes-release/release/v${KUBECTL_VERSION}/bin/linux/${ARCH}/kubectl
+    mv kubectl /usr/local/bin/kubectl
+    chmod +x /usr/local/bin/kubectl
 
     # get node tag
     echo "Getting node tag from HOSTNAME environmental:..."
@@ -17,7 +32,7 @@ function update_secret {
     previous_content=$(cat /ravendb/certs/"$node_tag".pfx)
     # update secret
     echo "Updating sever certificate on node $node_tag by updating ravendb-certs secret"
-    kubectl get secret ravendb-certs -o json -n ravendb | jq ".data[\"$node_tag.pfx\"]=\"$new_cert\"" | kubectl apply -f -
+    /usr/local/bin/kubectl get secret ravendb-certs -o json -n ravendb | jq ".data[\"$node_tag.pfx\"]=\"$new_cert\"" | /usr/local/bin/kubectl apply -f -
 
     content=$(cat "/ravendb/certs/$node_tag.pfx")
 
