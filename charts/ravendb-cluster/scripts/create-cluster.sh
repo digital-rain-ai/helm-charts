@@ -3,7 +3,7 @@
 set -e
 
 echo "Installing prerequisites..."
-apk add --update curl unzip jq openssl
+apk add --update curl unzip jq openssl findutils
 
 echo "Copying /ravendb/ravendb-setup-package-readonly/pack.zip to the /ravendb folder..."
 cp -v /ravendb/ravendb-setup-package/*.zip /ravendb/pack.zip
