@@ -14,8 +14,3 @@ email: user@example.com
 setupMode: LetsEncrypt
 license: '{}'
 imagePullSecrets: []
-
-# optional, for hackers
-environment:
-  SOME_ENV_VALUE: 'foo'
-  SOME_OTHER_ENV_VALUE: 'bar'

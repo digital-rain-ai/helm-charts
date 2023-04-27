@@ -22,8 +22,8 @@ spec:
   - match: {{ .Values.ingressRoute.matchRule }}
     kind: Rule
     services:
-    - name: api@internal
-      kind: TraefikService
+    - name: {{ include "opus.fullname" . }}
+      port: 8080
     {{- with .Values.ingressRoute.middlewares }}
     middlewares:
       {{- toYaml . | nindent 6 }}
