@@ -481,4 +481,15 @@ entries:
     urls:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/ravendb-cluster-0.1.0/ravendb-cluster-0.1.0.tgz
     version: 0.1.0
-generated: "2023-04-27T12:56:35.000648752Z"
+  website:
+  - apiVersion: v2
+    appVersion: 1.1113.1
+    created: "2023-04-27T13:08:33.132477905Z"
+    description: A Helm chart for the Opus website
+    digest: 20eec7b29e03edf3702939096903fb05385ba44c2c37c808e4fdcf9b26a14cfc
+    name: website
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.1.1/website-0.1.1.tgz
+    version: 0.1.1
+generated: "2023-04-27T13:08:33.132602406Z"
