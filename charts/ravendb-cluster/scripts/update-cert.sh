@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/bash
 
 function update_secret {
     # read stdin
