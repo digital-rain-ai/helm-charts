@@ -28,7 +28,7 @@ unzip -qq pack.zip -d ./ravendb-setup-package/ > /dev/null
 cd ravendb-setup-package
 
 echo "Reading node tag from the HOSTNAME environmental..."
-node_tag="$(env | grep HOSTNAME | cut -f 2 -d '-')" | tr '[:lower:]' '[:upper:]'
+node_tag="$(env | grep HOSTNAME | cut -f 2 -d '-' | tr '[:lower:]' '[:upper:]')"
 cd "${node_tag}"
 
 echo "Updating secret using kubectl get and kubectl apply..."
