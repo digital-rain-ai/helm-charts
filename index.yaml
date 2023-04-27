@@ -3,6 +3,16 @@ entries:
   identity-server:
   - apiVersion: v2
     appVersion: 1.1113.1
+    created: "2023-04-27T11:58:54.417085188Z"
+    description: A Helm chart for Identity Server
+    digest: c50474f89eeec0aa9b560c0050c00dfc1de150a7ee021c7baec3286dec715e05
+    name: identity-server
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/identity-server-0.1.8/identity-server-0.1.8.tgz
+    version: 0.1.8
+  - apiVersion: v2
+    appVersion: 1.1113.1
     created: "2023-04-27T10:54:41.083244666Z"
     description: A Helm chart for Identity Server
     digest: 1538954ff0b8f50164b9687e3da1510d5f71afa37055442c21923751a6962ed2
@@ -72,6 +82,16 @@ entries:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/identity-server-0.1.1/identity-server-0.1.1.tgz
     version: 0.1.1
   opus:
+  - apiVersion: v2
+    appVersion: 1.1113.1
+    created: "2023-04-27T11:58:54.986333564Z"
+    description: A Helm chart for Opus
+    digest: 26a464678d4adb62ac0b0bf3428fe5605ccf0a8fcbb6accf7dbd1be004547c42
+    name: opus
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/opus-0.1.19/opus-0.1.19.tgz
+    version: 0.1.19
   - apiVersion: v2
     appVersion: 1.1113.1
     created: "2023-04-27T10:54:41.296998327Z"
@@ -252,6 +272,16 @@ entries:
     urls:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/opus-0.1.1/opus-0.1.1.tgz
     version: 0.1.1
+  - apiVersion: v2
+    appVersion: 1.1113.1
+    created: "2023-04-27T11:58:54.818959277Z"
+    description: A Helm chart for the Opus website
+    digest: 33df523b5457db6182bbbb60962ff7a5202aa0594a9dc41d6e171a9e4434a52f
+    name: opus
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/opus-0.1.0/opus-0.1.0.tgz
+    version: 0.1.0
   ravendb-cluster:
   - apiVersion: v1
     appVersion: "5.3"
@@ -442,4 +472,4 @@ entries:
     urls:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/ravendb-cluster-0.1.0/ravendb-cluster-0.1.0.tgz
     version: 0.1.0
-generated: "2023-04-27T10:54:41.471145184Z"
+generated: "2023-04-27T11:58:54.986511166Z"
