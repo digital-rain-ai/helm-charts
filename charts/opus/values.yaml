@@ -46,8 +46,8 @@ ingressRoute:
   annotations: {}
   # Additional ingressRoute labels (e.g. for filtering IngressRoute by custom labels)
   labels: {}
-  # The router match rule used for the ingressRoute
-  matchRule: PathPrefix(`/app`)
+  # double $$ because $ is escaped with $. Match /app or /app/, but not e.g. /appsettings.json
+  matchRule: PathPrefix(`/{path:app($$|/.*)}`)
   # Specify the allowed entrypoints to use for the ingress route, (e.g. traefik, web, websecure).
   entryPoints: ["websecure"]
   # Additional ingressRoute middlewares (e.g. for authentication)
@@ -85,5 +85,5 @@ volumes: []
 volumeMounts: []
 
 env:
-  - name: "pathBase"
+  - name: "PathBase"
     value: "/app"
