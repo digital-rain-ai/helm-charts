@@ -23,6 +23,7 @@ spec:
     kind: Rule
     services:
     - name: {{ include "opus.fullname" . }}
+      namespace: {{ .Release.Namespace }}
       port: 8080
     {{- with .Values.ingressRoute.middlewares }}
     middlewares:
