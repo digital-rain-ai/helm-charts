@@ -28,8 +28,8 @@ unzip -qq pack.zip -d ./ravendb-setup-package/ > /dev/null
 cd ravendb-setup-package
 
 echo "Reading node tag from the HOSTNAME environmental..."
-node_tag="$(env | grep HOSTNAME | cut -f 2 -d '-' | tr '[:lower:]' '[:upper:]')"
-cd "${node_tag}"
+node_tag="$(env | grep HOSTNAME | cut -f 2 -d '-')"
+cd "$(echo $node_tag | tr '[:lower:]' '[:upper:]')"
 
 echo "Updating secret using kubectl get and kubectl apply..."
 /usr/local/bin/kubectl get secret ravendb-certs -o json -n ravendb | jq ".data[\"$node_tag.pfx\"]=\"$(cat ./*certificate* | base64)\"" | /usr/local/bin/kubectl apply -f -
