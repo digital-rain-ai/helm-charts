@@ -99,7 +99,8 @@ echo "Generating new client certificate..."
 curl "https://${tags[0]}.$domain_name/admin/certificates" \
   -H 'content-type: application/x-www-form-urlencoded' \
   --data-raw 'Options=%7B%22Name%22%3A%22opus%22%2C%22Permissions%22%3Anull%2C%22SecurityClearance%22%3A%22Operator%22%2C%22NotAfter%22%3A%222122-04-28T15%3A05%3A04Z%22%7D' \
-  --cert cert.pem
+  --cert cert.pem \
+  -o opus.zip
 
 unzip opus.zip
 
