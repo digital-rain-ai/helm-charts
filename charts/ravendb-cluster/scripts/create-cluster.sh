@@ -2,8 +2,23 @@
 
 set -e
 
+KUBECTL_VERSION=1.26.3
+
 echo "Installing prerequisites..."
 apk add --update curl unzip jq openssl findutils
+
+case `uname -m` in
+    x86_64) ARCH=amd64; ;;
+    armv7l) ARCH=arm; ;;
+    aarch64) ARCH=arm64; ;;
+    ppc64le) ARCH=ppc64le; ;;
+    s390x) ARCH=s390x; ;;
+    *) echo "un-supported arch, exit ..."; exit 1; ;;
+esac
+
+curl -sLO https://storage.googleapis.com/kubernetes-release/release/v${KUBECTL_VERSION}/bin/linux/${ARCH}/kubectl
+mv kubectl /usr/local/bin/kubectl
+chmod +x /usr/local/bin/kubectl
 
 echo "Copying /ravendb/ravendb-setup-package-readonly/pack.zip to the /ravendb folder..."
 cp -v /ravendb/ravendb-setup-package/*.zip /ravendb/pack.zip
@@ -78,3 +93,15 @@ echo "Registering admin client certificate..."
 node_tag_upper="$(echo "${tags[0]}" | tr '[:lower:]' '[:upper:]')"
 /app/Server/rvn put-client-certificate \
     "https://${tags[0]}.$domain_name" /ravendb/ravendb-setup-package-copy/"$node_tag_upper"/*.pfx /ravendb/ravendb-setup-package-copy/admin.client.certificate.*.pfx
+
+echo "Generating new client certificate..."
+
+curl "https://${tags[0]}.$domain_name/admin/certificates" \
+  -H 'content-type: application/x-www-form-urlencoded' \
+  --data-raw 'Options=%7B%22Name%22%3A%22opus%22%2C%22Permissions%22%3Anull%2C%22SecurityClearance%22%3A%22Operator%22%2C%22NotAfter%22%3A%222122-04-28T15%3A05%3A04Z%22%7D' \
+  --cert cert.pem
+
+unzip opus.zip
+
+echo "Updating opus/ravendb-client-secret using kubectl get and kubectl apply..."
+/usr/local/bin/kubectl get secret ravendb-client-secret -o json -n opus | jq ".data[\"opus.pfx\"]=\"$(cat ./opus/opus.pfx | base64)\"" | /usr/local/bin/kubectl apply -f -
