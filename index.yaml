@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   identity-server:
   - apiVersion: v2
+    appVersion: 1.1123.1
+    created: "2023-04-28T13:46:05.317333506Z"
+    description: A Helm chart for Identity Server
+    digest: 4babfb2feb5ac3a05a6642dbdf6b2b1cee6be1c566ec5963ed0fcad249e7af47
+    name: identity-server
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/identity-server-0.1.11/identity-server-0.1.11.tgz
+    version: 0.1.11
+  - apiVersion: v2
     appVersion: 1.1122.1
     created: "2023-04-28T10:53:37.610093432Z"
     description: A Helm chart for Identity Server
@@ -624,4 +634,4 @@ entries:
     urls:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.1.1/website-0.1.1.tgz
     version: 0.1.1
-generated: "2023-04-28T13:20:08.526114414Z"
+generated: "2023-04-28T13:46:05.317449208Z"
