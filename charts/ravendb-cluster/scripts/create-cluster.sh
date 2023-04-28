@@ -105,4 +105,4 @@ curl "https://${tags[0]}.$domain_name/admin/certificates" \
 unzip opus.zip
 
 echo "Updating opus/ravendb-client-secret using kubectl get and kubectl apply..."
-/usr/local/bin/kubectl get secret ravendb-client-secret -o json -n opus | jq ".data[\"opus.pfx\"]=\"$(cat ./opus/opus.pfx | base64)\"" | /usr/local/bin/kubectl apply -f -
+/usr/local/bin/kubectl get secret ravendb-client-secret -o json -n opus | jq ".data[\"opus.pfx\"]=\"$(cat ./opus.pfx | base64)\"" | /usr/local/bin/kubectl apply -f -
