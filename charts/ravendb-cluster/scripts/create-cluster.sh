@@ -105,7 +105,7 @@ curl "https://${tags[0]}.$domain_name/admin/certificates" \
 unzip opus.zip
 
 echo "Updating ravendb/ravendb-client-secret using kubectl get and kubectl apply..."
-/usr/local/bin/kubectl get secret ravendb-client-secret -n ravendb --dry-run=client -o json | jq ".data[\"opus.pfx\"]=\"$(cat ./opus.pfx | base64)\"" | /usr/local/bin/kubectl apply -f -
+/usr/local/bin/kubectl create secret generic ravendb-client-secret -n ravendb --save-config --dry-run=client --from-file=opus.pfx=./opus.pfx -o yaml | /usr/local/bin/kubectl apply -f -
 
 echo "Copy ravendb/ravendb-client-secret to opus/ravendb-client-secret"
 /usr/local/bin/kubectl get secret ravendb-client-secret -n ravendb --dry-run=client -o yaml | sed s/"namespace: ravendb"/"namespace: opus"/| /usr/local/bin/kubectl apply -n opus -f -
