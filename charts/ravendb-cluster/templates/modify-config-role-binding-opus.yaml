@@ -2,7 +2,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: modify-config
-  namespace: ravendb
+  namespace: opus
   labels:
     app.kubernetes.io/name: ravendb
     app.kubernetes.io/managed-by: {{ .Release.Service }}
