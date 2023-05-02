@@ -108,4 +108,4 @@ echo "Updating ravendb/ravendb-client-secret..."
 /usr/local/bin/kubectl create secret generic ravendb-client-secret -n ravendb --save-config --dry-run=client --from-file=opus.pfx=./opus.pfx -o yaml | /usr/local/bin/kubectl apply -f -
 
 echo "Copy ravendb/ravendb-client-secret to opus/ravendb-client-secret"
-/usr/local/bin/kubectl get secret ravendb-client-secret -n ravendb --dry-run=client -o yaml | sed s/"namespace: ravendb"/"namespace: opus"/| /usr/local/bin/kubectl apply -n opus -f -
+/usr/local/bin/kubectl get secret ravendb-client-secret -n ravendb -o yaml | sed s/"namespace: ravendb"/"namespace: opus"/| /usr/local/bin/kubectl apply -n opus -f -
