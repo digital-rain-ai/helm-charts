@@ -14,5 +14,6 @@ rules:
       - secrets
       - configmaps
     verbs:
+      - create
       - get
       - patch
