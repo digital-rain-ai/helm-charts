@@ -63,7 +63,7 @@ done
 
 echo "Figuring out which tags should be called..."
 for tag in "${tags[@]}" ; do
-  tag_index="$(curl https://"${tags[0]}"."$domain_name"/cluster/topology -Ss --cert cert.pem |  jq ".Topology.AllNodes | keys | index( \"$tag\" )" )"
+  tag_index="$(curl https://"${tags[0]}"."$domain_name"/cluster/topology -Ss --cert cert.pem |  jq ".Topology.AllNodes | keys | index( \"$(echo "$tag" | tr '[:lower:]' '[:upper:]')\" )" )"
   echo "$tag index is: $tag_index"
   if [ "$tag" != "${tags[0]}" ] && [ "$tag_index" == "null" ]; then
       urls+=("https://${tags[0]}.$domain_name/admin/cluster/node?url=https%3A%2F%2F$tag.$domain_name&tag=$(echo "$tag" | tr '[:lower:]' '[:upper:]')")
@@ -75,7 +75,7 @@ echo "Building cluster..."
 echo "${urls[@]}"
 for url in "${urls[@]}"
 do
-    curl -L -X PUT "$url" --cert cert.pem
+    curl --retry 5 -L -X PUT "$url" --cert cert.pem
 done
 
 
@@ -104,8 +104,5 @@ curl "https://${tags[0]}.$domain_name/admin/certificates" \
 
 unzip opus.zip
 
-echo "Updating ravendb/ravendb-client-secret..."
-/usr/local/bin/kubectl create secret generic ravendb-client-secret -n ravendb --save-config --dry-run=client --from-file=opus.pfx=./opus.pfx -o yaml | /usr/local/bin/kubectl apply -f -
-
-echo "Copy ravendb/ravendb-client-secret to opus/ravendb-client-secret"
-/usr/local/bin/kubectl get secret ravendb-client-secret -n ravendb -o yaml | sed s/"namespace: ravendb"/"namespace: opus"/| /usr/local/bin/kubectl apply -n opus -f -
+echo "Setting opus/ravendb-client-secret..."
+/usr/local/bin/kubectl create secret generic ravendb-client-secret -n opus --save-config --dry-run=client --from-file=opus.pfx=./opus.pfx -o yaml | /usr/local/bin/kubectl apply -f -
