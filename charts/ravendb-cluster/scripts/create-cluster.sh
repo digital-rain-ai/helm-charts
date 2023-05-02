@@ -94,15 +94,21 @@ node_tag_upper="$(echo "${tags[0]}" | tr '[:lower:]' '[:upper:]')"
 /app/Server/rvn put-client-certificate \
     "https://${tags[0]}.$domain_name" /ravendb/ravendb-setup-package-copy/"$node_tag_upper"/*.pfx /ravendb/ravendb-setup-package-copy/admin.client.certificate.*.pfx
 
-echo "Generating new client certificate..."
 
-curl "https://${tags[0]}.$domain_name/admin/certificates" \
-  -H 'content-type: application/x-www-form-urlencoded' \
-  --data-raw 'Options=%7B%22Name%22%3A%22opus%22%2C%22Permissions%22%3Anull%2C%22SecurityClearance%22%3A%22Operator%22%2C%22NotAfter%22%3A%222122-04-28T15%3A05%3A04Z%22%7D' \
-  --cert cert.pem \
-  -o opus.zip
+echo "Checking for existing client certificate"
+num_opus_certs=$(curl "https://${tags[0]}.$domain_name/certificates?secondary=true&metadataOnly=true" -Ss --cert cert.pem | jq '.Results[] | select( .Name == "opus") | length')
 
-unzip opus.zip
+if [ $num_opus_certs -eq 0 ]; then
+  echo "Generating new client certificate..."
 
-echo "Setting opus/ravendb-client-secret..."
-/usr/local/bin/kubectl create secret generic ravendb-client-secret -n opus --save-config --dry-run=client --from-file=opus.pfx=./opus.pfx -o yaml | /usr/local/bin/kubectl apply -f -
+  curl "https://${tags[0]}.$domain_name/admin/certificates" \
+    -H 'content-type: application/x-www-form-urlencoded' \
+    --data-raw 'Options=%7B%22Name%22%3A%22opus%22%2C%22Permissions%22%3Anull%2C%22SecurityClearance%22%3A%22Operator%22%2C%22NotAfter%22%3A%222122-04-28T15%3A05%3A04Z%22%7D' \
+    --cert cert.pem \
+    -o opus.zip
+
+  unzip opus.zip
+
+  echo "Setting opus/ravendb-client-secret..."
+  /usr/local/bin/kubectl create secret generic ravendb-client-secret -n opus --save-config --dry-run=client --from-file=opus.pfx=./opus.pfx -o yaml | /usr/local/bin/kubectl apply -f -
+fi
