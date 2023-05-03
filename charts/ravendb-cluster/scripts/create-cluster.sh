@@ -98,7 +98,7 @@ node_tag_upper="$(echo "${tags[0]}" | tr '[:lower:]' '[:upper:]')"
 echo "Checking for existing client certificate"
 num_opus_certs=$(curl "https://${tags[0]}.$domain_name/admin/certificates?secondary=true&metadataOnly=true" -Ss --cert cert.pem | jq '.Results[] | select( .Name == "opus") | length')
 
-if [ $num_opus_certs -eq 0 ]; then
+if [ "$num_opus_certs" == "" ] || [ $num_opus_certs == 0 ]; then
   echo "Generating new client certificate..."
 
   curl "https://${tags[0]}.$domain_name/admin/certificates" \
