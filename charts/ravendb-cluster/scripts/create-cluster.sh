@@ -53,6 +53,7 @@ done
 echo "Waiting for nodes to stand-up..."
 for tag in "${tags[@]}"
 do
+echo "Checking https://$tag.$domain_name"
 while ! curl "https://$tag.$domain_name/setup/alive"
 do
     echo -n "$tag... "
@@ -95,7 +96,7 @@ node_tag_upper="$(echo "${tags[0]}" | tr '[:lower:]' '[:upper:]')"
     "https://${tags[0]}.$domain_name" /ravendb/ravendb-setup-package-copy/"$node_tag_upper"/*.pfx /ravendb/ravendb-setup-package-copy/admin.client.certificate.*.pfx
 
 
-echo "Checking for existing client certificate"
+echo "Checking for existing client certificate..."
 num_opus_certs=$(curl "https://${tags[0]}.$domain_name/admin/certificates?secondary=true&metadataOnly=true" -Ss --cert cert.pem | jq '.Results[] | select( .Name == "opus") | length')
 
 if [ "$num_opus_certs" == "" ] || [ $num_opus_certs == 0 ]; then
@@ -111,4 +112,6 @@ if [ "$num_opus_certs" == "" ] || [ $num_opus_certs == 0 ]; then
 
   echo "Setting opus/ravendb-client-secret..."
   /usr/local/bin/kubectl create secret generic ravendb-client-secret -n opus --save-config --dry-run=client --from-file=opus.pfx=./opus.pfx -o yaml | /usr/local/bin/kubectl apply -f -
+elif
+  echo "Client certificate already exists"
 fi
