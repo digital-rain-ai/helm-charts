@@ -112,6 +112,6 @@ if [ "$num_opus_certs" == "" ] || [ $num_opus_certs == 0 ]; then
 
   echo "Setting opus/ravendb-client-secret..."
   /usr/local/bin/kubectl create secret generic ravendb-client-secret -n opus --save-config --dry-run=client --from-file=opus.pfx=./opus.pfx -o yaml | /usr/local/bin/kubectl apply -f -
-elif
+else
   echo "Client certificate already exists"
 fi

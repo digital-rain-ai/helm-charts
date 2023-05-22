@@ -2,4 +2,4 @@ apiVersion: v1
 appVersion: "5.4"
 description: Chart for RavenDB Cluster
 name: ravendb-cluster
-version: 0.1.49
+version: 0.1.50
