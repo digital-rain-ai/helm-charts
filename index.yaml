@@ -3,6 +3,16 @@ entries:
   identity-server:
   - apiVersion: v2
     appVersion: 1.1182.1
+    created: "2023-05-22T07:55:38.50390081Z"
+    description: A Helm chart for Identity Server
+    digest: c2d754af747c215ffc94578268328fc950609f8ccb97a93a645fed086fd50658
+    name: identity-server
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/identity-server-0.1.17/identity-server-0.1.17.tgz
+    version: 0.1.17
+  - apiVersion: v2
+    appVersion: 1.1182.1
     created: "2023-05-19T13:09:06.537236189Z"
     description: A Helm chart for Identity Server
     digest: b251875288c5d86d6464736610193328f45c47f5788de788cb742361d123caf3
@@ -162,6 +172,16 @@ entries:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/identity-server-0.1.1/identity-server-0.1.1.tgz
     version: 0.1.1
   opus:
+  - apiVersion: v2
+    appVersion: 1.1182.1
+    created: "2023-05-22T07:55:38.635128898Z"
+    description: A Helm chart for Opus
+    digest: a30ab93646b65e25c9175fe5e9cfcfde2c0278620f8f49352826111698775d84
+    name: opus
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/opus-0.1.27/opus-0.1.27.tgz
+    version: 0.1.27
   - apiVersion: v2
     appVersion: 1.1182.1
     created: "2023-05-19T13:09:06.688941351Z"
@@ -877,6 +897,16 @@ entries:
   website:
   - apiVersion: v2
     appVersion: 1.1182.1
+    created: "2023-05-22T07:55:38.770823878Z"
+    description: A Helm chart for the Opus website
+    digest: 0928bc52ae95bc5ee117552062c251a5258f04044a30210baf968b96b4fee44b
+    name: website
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.1.9/website-0.1.9.tgz
+    version: 0.1.9
+  - apiVersion: v2
+    appVersion: 1.1182.1
     created: "2023-05-19T13:09:06.970133919Z"
     description: A Helm chart for the Opus website
     digest: 81383f8e7cff5bef062459e732676341c1fdfbbcae521f30c5f62cdd9aa65472
@@ -955,4 +985,4 @@ entries:
     urls:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.1.1/website-0.1.1.tgz
     version: 0.1.1
-generated: "2023-05-19T13:09:06.970868927Z"
+generated: "2023-05-22T07:55:38.771434977Z"
