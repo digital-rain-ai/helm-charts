@@ -48,6 +48,8 @@ ingressRoute:
   labels: {}
   # The router match rule used for the ingressRoute
   matchRule: PathPrefix(`/`)
+  # Higher number means a higher priority. By default the priority is set to the length of the matchRule. Use this to override the default
+  priority: null
   # Specify the allowed entrypoints to use for the ingress route, (e.g. traefik, web, websecure).
   entryPoints: ["websecure"]
   # Additional ingressRoute middlewares (e.g. for authentication)

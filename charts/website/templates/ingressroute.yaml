@@ -21,6 +21,7 @@ spec:
   routes:
   - match: {{ .Values.ingressRoute.matchRule }}
     kind: Rule
+    priority: {{ .Values.ingressRoute.priority }}
     services:
     - name: {{ include "opus.fullname" . }}
       namespace: {{ .Release.Namespace }}
