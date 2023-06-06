@@ -88,3 +88,11 @@ volumeMounts: []
 env:
   - name: "PathBase"
     value: "/iot"
+
+livenessProbe:
+  httpGet:
+    path: "/healthz"
+
+readinessProbe:
+  httpGet:
+    path: "/healthz"

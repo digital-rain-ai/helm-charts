@@ -85,3 +85,11 @@ affinity: {}
 volumes: []
 
 volumeMounts: []
+
+livenessProbe:
+  httpGet:
+    path: "/healthz"
+
+readinessProbe:
+  httpGet:
+    path: "/healthz"

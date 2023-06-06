@@ -39,11 +39,11 @@ spec:
               protocol: TCP
           livenessProbe:
             httpGet:
-              path: {{ .Values.livenessProbe.httpGet.path | default "/healthz" }}
+              path: {{ .Values.livenessProbe.httpGet.path }}
               port: http
           readinessProbe:
             httpGet:
-              path: {{ .Values.readinessProbe.httpGet.path | default "/healthz" }}
+              path: {{ .Values.readinessProbe.httpGet.path }}
               port: http
           {{- with .Values.volumeMounts }}
           volumeMounts:
