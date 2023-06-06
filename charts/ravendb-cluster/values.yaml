@@ -1,6 +1,6 @@
 # customizable
 storageSize: 5Gi
-ravenImageTag: "1.1211.2"
+ravenImageTag: "1.1216.1"
 imagePullPolicy: IfNotPresent
 ingressClassName: nginx
 
