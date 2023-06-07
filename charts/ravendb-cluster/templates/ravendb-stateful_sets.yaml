@@ -89,6 +89,9 @@ spec:
         - name: RAVEN_PublicServerUrl_Tcp
           value: "tcp://{{ . | lower }}-tcp.{{$.Values.domain}}:443"
 
+        - name: RAVEN_DataDir
+          value: /app/Server/RavenData
+
         # The environmental values defined in the values.yaml should be listed below this comment while debugging
         {{ if ( $.Values.environment )}}
         {{- range $key, $val := $.Values.environment }}
@@ -105,7 +108,7 @@ spec:
           - name: ravendb-certs
             mountPath: /ravendb/certs
           - name: "ravendb"
-            mountPath: /opt/RavenDB/Server/RavenData
+            mountPath: /app/Server/RavenData
 
       volumes:
         - name: ravendb-scripts
