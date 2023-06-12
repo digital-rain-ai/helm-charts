@@ -142,7 +142,7 @@ if [ "$BACKUP_ENABLED" == "true" ]; then
     curl "https://${tags[0]}.$domain_name/admin/configuration/server-wide/backup" \
       -X 'PUT' \
       -H 'content-type: application/json; charset=UTF-8' \
-      --data-raw $request_body \
+      --data-raw "$request_body" \
       --cert cert.pem
 
     echo "Period server-wide backup task created"
