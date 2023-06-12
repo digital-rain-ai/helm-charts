@@ -1,7 +1,7 @@
 # customizable
 storageSize: 5Gi
 storageClassName:
-ravenImageTag: "1.1231.1"
+ravenImageTag: "1.1234.2"
 imagePullPolicy: IfNotPresent
 ingressClassName: nginx
 
@@ -15,3 +15,13 @@ email: user@example.com
 setupMode: LetsEncrypt
 license: '{}'
 imagePullSecrets: []
+
+# Server-wide Backup configuration
+backupEnabled: false
+backupTaskName: "Periodic Backup"
+backupFullBackupFrequency: "0 2 * * *"
+backupIncrementalBackupFrequency: "0 * * * *"
+backupMinimumBackupAgeToKeep: "30.00:00:00"
+backupAzureContainerName: ""
+backupAzureAccountName: ""
+backupAzureSasTokenSecretName: ""

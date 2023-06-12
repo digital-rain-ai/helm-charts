@@ -2,6 +2,15 @@
 
 set -e
 
+BACKUP_ENABLED=$1
+BACKUP_TASK_NAME=$2
+BACKUP_FullBackupFrequency=$3
+BACKUP_IncrementalBackupFrequency=$4
+BACKUP_MinimumBackupAgeToKeep=$5
+BACKUP_AZURE_StorageContainer=$6
+BACKUP_AZURE_AccountName=$7
+BACKUP_AZURE_SasTokenSecretName=$8
+
 KUBECTL_VERSION=1.26.3
 
 echo "Installing prerequisites..."
@@ -114,4 +123,30 @@ if [ "$num_opus_certs" == "" ] || [ $num_opus_certs == 0 ]; then
   /usr/local/bin/kubectl create secret generic ravendb-client-secret -n opus --save-config --dry-run=client --from-file=opus.pfx=./opus.pfx -o yaml | /usr/local/bin/kubectl apply -f -
 else
   echo "Client certificate already exists"
+fi
+
+if [ "$BACKUP_ENABLED" == "true" ]; then
+  echo "Checking for existing server-wide periodic backup task..."
+
+  num_backup_tasks=$(curl "https://${tags[0]}.$domain_name/admin/periodic-backup/tasks" -Ss --cert cert.pem | jq '.Tasks[] | select( .TaskType == "Backup") | length')
+
+  if [ "$num_backup_tasks" == "" ] || [ $num_backup_tasks == 0 ]; then
+    echo "Creating new server-wide periodic backup task..."
+
+    AzureSasToken=$(/usr/local/bin/kubectl -n ravendb get secret $BACKUP_AZURE_SasTokenSecretName -o jsonpath="{.data.token}" | base64 -d)
+
+    request_body="{\"TaskId\":0,\"Name\":\"${BACKUP_TASK_NAME}\",\"Disabled\":false,\"PinToMentorNode\":false,\"FullBackupFrequency\":\"${BACKUP_FullBackupFrequency}\",\"IncrementalBackupFrequency\":\"${BACKUP_IncrementalBackupFrequency}\",\"RetentionPolicy\":{\"Disabled\":false,\"MinimumBackupAgeToKeep\":\"${BACKUP_MinimumBackupAgeToKeep}\"},\"BackupType\":\"Snapshot\",\"SnapshotSettings\":{\"CompressionLevel\":\"Optimal\",\"ExcludeIndexes\":true},\"BackupEncryptionSettings\":{\"EncryptionMode\":\"None\"},\"LocalSettings\":{\"Disabled\":true},\"S3Settings\":{\"Disabled\":true},\"GlacierSettings\":{\"Disabled\":true},\"AzureSettings\":{\"Disabled\":false,\"StorageContainer\":\"${BACKUP_AZURE_StorageContainer}\",\"AccountName\":\"${BACKUP_AZURE_AccountName}\",\"SasToken\":\"${AzureSasToken}\"},\"GoogleCloudSettings\":{\"Disabled\":true},\"FtpSettings\":{\"Disabled\":true},\"ExcludedDatabases\":[]}"
+
+    echo "Request body: $request_body"
+
+    curl "https://${tags[0]}.$domain_name/admin/configuration/server-wide/backup" \
+      -X 'PUT' \
+      -H 'content-type: application/json; charset=UTF-8' \
+      --data-raw $request_body \
+      --cert cert.pem
+
+    echo "Period server-wide backup task created"
+  else
+    echo "Periodic backup task already exists"
+  fi
 fi

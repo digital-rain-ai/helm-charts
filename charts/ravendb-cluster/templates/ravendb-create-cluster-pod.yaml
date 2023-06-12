@@ -27,7 +27,17 @@ spec:
     image: "ghcr.io/digital-rain-ai/ravendb:{{$.Values.ravenImageTag}}"
     imagePullPolicy: {{ $.Values.imagePullPolicy }}
     command: ["/bin/bash"]
-    args: ["/ravendb/scripts/create-cluster.sh"]
+    args: [
+        "/ravendb/scripts/create-cluster.sh",
+        "{{$.Values.backupEnabled}}",
+        "{{$.Values.backupTaskName}}",
+        "{{$.Values.backupFullBackupFrequency}}",
+        "{{$.Values.backupIncrementalBackupFrequency}}",
+        "{{$.Values.backupMinimumBackupAgeToKeep}}",
+        "{{$.Values.backupAzureContainerName}}",
+        "{{$.Values.backupAzureAccountName}}",
+        "{{$.Values.backupAzureSasToken}}"
+      ]
     volumeMounts:
       - name: ravendb-scripts
         mountPath: /ravendb/scripts
