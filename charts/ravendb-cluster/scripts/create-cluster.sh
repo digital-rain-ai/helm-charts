@@ -128,7 +128,7 @@ fi
 if [ "$BACKUP_ENABLED" == "true" ]; then
   echo "Checking for existing server-wide periodic backup task..."
 
-  num_backup_tasks=$(curl "https://${tags[0]}.$domain_name/admin/periodic-backup/tasks" -Ss --cert cert.pem | jq '.Tasks[] | select( .TaskType == "Backup") | length')
+  num_backup_tasks=$(curl "https://${tags[0]}.$domain_name/admin/server-wide/tasks" -Ss --cert cert.pem | jq '.Tasks[] | select( .TaskType == "Backup") | length')
 
   if [ "$num_backup_tasks" == "" ] || [ $num_backup_tasks == 0 ]; then
     echo "Creating new server-wide periodic backup task..."
