@@ -32,7 +32,7 @@ spec:
       {{- end }}
       initContainers:
       - name: "{{$.Chart.Name}}-init"
-        image: "alpine:3.17.3"
+        image: "alpine:3.18.0"
         command: ["/bin/sh"]
         args: ["/ravendb/scripts/initialize-pod.sh"]
 
