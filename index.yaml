@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   identity-server:
   - apiVersion: v2
+    appVersion: 1.1713.1
+    created: "2023-10-11T10:30:57.116822428Z"
+    description: A Helm chart for Identity Server
+    digest: b752a2bd30d5a21ac2ebc089896f038efb641fde035b3125441ab650ad2ab055
+    name: identity-server
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/identity-server-0.1.308/identity-server-0.1.308.tgz
+    version: 0.1.308
+  - apiVersion: v2
     appVersion: 1.1691.1
     created: "2023-10-11T02:49:04.032029263Z"
     description: A Helm chart for Identity Server
@@ -953,6 +963,16 @@ entries:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/iot-0.1.0/iot-0.1.0.tgz
     version: 0.1.0
   opus:
+  - apiVersion: v2
+    appVersion: 1.1713.1
+    created: "2023-10-11T10:30:57.291453348Z"
+    description: A Helm chart for Opus
+    digest: 42e23b74b165bbe7a4adbc7a18b753c4bdac91e4ff36451d6038e3d2389c5183
+    name: opus
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/opus-0.1.73/opus-0.1.73.tgz
+    version: 0.1.73
   - apiVersion: v2
     appVersion: 1.1691.1
     created: "2023-10-11T02:49:04.324886773Z"
@@ -2306,6 +2326,16 @@ entries:
     version: 0.1.0
   website:
   - apiVersion: v2
+    appVersion: 1.1713.1
+    created: "2023-10-11T10:30:57.42352156Z"
+    description: A Helm chart for the Opus website
+    digest: a4eb277e81c3f4aa90e86f9635c64c84f079c8643df1d758664418d67f89d336
+    name: website
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.1.51/website-0.1.51.tgz
+    version: 0.1.51
+  - apiVersion: v2
     appVersion: 1.1691.1
     created: "2023-10-11T02:49:04.531964437Z"
     description: A Helm chart for the Opus website
@@ -2795,4 +2825,4 @@ entries:
     urls:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.1.1/website-0.1.1.tgz
     version: 0.1.1
-generated: "2023-10-11T02:49:04.533557859Z"
+generated: "2023-10-11T10:30:57.424564929Z"
