@@ -973,6 +973,16 @@ entries:
     version: 0.1.1
   iot:
   - apiVersion: v2
+    appVersion: 1.1968.1
+    created: "2023-12-13T03:28:23.627888431Z"
+    description: A Helm chart for Opus IoT
+    digest: 053a606d422587cbd34aacdfcb7d78df0031f66a7bca6244fefa39ee17e56774
+    name: iot
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/iot-0.4.5/iot-0.4.5.tgz
+    version: 0.4.5
+  - apiVersion: v2
     appVersion: 1.1966.1
     created: "2023-12-13T02:50:39.968616601Z"
     description: A Helm chart for Opus IoT
@@ -4602,4 +4612,4 @@ entries:
     urls:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.1.1/website-0.1.1.tgz
     version: 0.1.1
-generated: "2023-12-13T02:50:40.275302198Z"
+generated: "2023-12-13T03:28:23.628556826Z"
