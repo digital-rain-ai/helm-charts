@@ -993,6 +993,16 @@ entries:
     version: 0.1.1
   iot:
   - apiVersion: v2
+    appVersion: 1.1997.1
+    created: "2023-12-19T00:39:29.503726129Z"
+    description: A Helm chart for Opus IoT
+    digest: 3a4d50e2dd84ea47d5ca87654f677940b1d867312e2b166d0b39e4b15011c7bc
+    name: iot
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/iot-0.4.13/iot-0.4.13.tgz
+    version: 0.4.13
+  - apiVersion: v2
     appVersion: 1.1996.1
     created: "2023-12-18T12:26:09.362024036Z"
     description: A Helm chart for Opus IoT
@@ -1843,6 +1853,16 @@ entries:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/iot-0.1.0/iot-0.1.0.tgz
     version: 0.1.0
   opus:
+  - apiVersion: v2
+    appVersion: 1.1997.1
+    created: "2023-12-19T00:39:29.676054437Z"
+    description: A Helm chart for Opus
+    digest: d666158ab46ab701ecc063cc0400fb8cfc863a4621ee34434f575aff3a08f011
+    name: opus
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/opus-0.4.13/opus-0.4.13.tgz
+    version: 0.4.13
   - apiVersion: v2
     appVersion: 1.1996.1
     created: "2023-12-18T12:26:09.486366412Z"
@@ -3841,6 +3861,16 @@ entries:
     version: 0.1.0
   website:
   - apiVersion: v2
+    appVersion: 1.1997.1
+    created: "2023-12-19T00:39:29.864154803Z"
+    description: A Helm chart for the Opus website
+    digest: 3301cd1a8a87128692396f98d7c133e5027f3f530cbbd5cb722d02b58ce264d5
+    name: website
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.4.13/website-0.4.13.tgz
+    version: 0.4.13
+  - apiVersion: v2
     appVersion: 1.1996.1
     created: "2023-12-18T12:26:09.687114033Z"
     description: A Helm chart for the Opus website
@@ -4810,4 +4840,4 @@ entries:
     urls:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.1.1/website-0.1.1.tgz
     version: 0.1.1
-generated: "2023-12-18T12:26:09.688353389Z"
+generated: "2023-12-19T00:39:29.865430617Z"
