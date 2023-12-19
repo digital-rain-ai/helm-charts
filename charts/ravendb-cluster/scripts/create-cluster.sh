@@ -11,7 +11,7 @@ BACKUP_AZURE_StorageContainer=$6
 BACKUP_AZURE_AccountName=$7
 BACKUP_AZURE_SasTokenSecretName=$8
 
-KUBECTL_VERSION=1.26.3
+KUBECTL_VERSION=1.26.10
 
 echo "Installing prerequisites..."
 apk add --update curl unzip jq openssl findutils

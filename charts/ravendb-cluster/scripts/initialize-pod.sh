@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 set -e
 
-KUBECTL_VERSION=1.26.3
+KUBECTL_VERSION=1.26.10
 
 apk add --update curl unzip jq sudo
 

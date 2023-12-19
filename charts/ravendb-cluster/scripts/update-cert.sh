@@ -18,7 +18,7 @@ function update_secret {
         *) echo "un-supported arch, exit ..."; exit 1; ;;
     esac
 
-    KUBECTL_VERSION=1.26.3
+    KUBECTL_VERSION=1.26.10
 
     curl -sLO https://storage.googleapis.com/kubernetes-release/release/v${KUBECTL_VERSION}/bin/linux/${ARCH}/kubectl
     mv kubectl /usr/local/bin/kubectl
