@@ -88,8 +88,8 @@ volumeMounts: []
 
 livenessProbe:
   httpGet:
-    path: "/healthz"
+    path: "/healthz/live"
 
 readinessProbe:
   httpGet:
-    path: "/healthz"
+    path: "/healthz/ready"
