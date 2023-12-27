@@ -90,6 +90,12 @@ env:
   - name: "PathBase"
     value: "/app"
 
+startupProbe:
+  httpGet:
+    path: "/healthz/live"
+  failureThreshold: 30
+  periodSeconds: 10
+
 livenessProbe:
   httpGet:
     path: "/healthz/live"
