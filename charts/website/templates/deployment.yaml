@@ -37,6 +37,14 @@ spec:
             - name: http
               containerPort: {{ .Values.service.port }}
               protocol: TCP
+          {{- if .Values.startupProbe }}
+          startupProbe:
+            httpGet:
+              path: {{ .Values.startupProbe.httpGet.path }}
+              port: http
+            failureThreshold: {{ .Values.startupProbe.failureThreshold }}
+            periodSeconds: {{ .Values.startupProbe.periodSeconds }}
+          {{- end }}
           livenessProbe:
             httpGet:
               path: {{ .Values.livenessProbe.httpGet.path }}
