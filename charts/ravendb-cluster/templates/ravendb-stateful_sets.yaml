@@ -89,11 +89,13 @@ spec:
         - name: RAVEN_PublicServerUrl_Tcp
           value: "tcp://{{ . | lower }}-tcp.{{$.Values.domain}}:443"
 
+        {{ if ( $.Values.useTempLocalStorage )}}
         - name: RAVEN_Storage_TempPath
           value: "/RavenTemp/ravendb-storage-temp-{{ . | lower }}"
 
         - name: RAVEN_Indexing_TempPath
           value: "/RavenTemp/ravendb-indexing-temp-{{ . | lower }}"
+        {{ end }}
 
         - name: RAVEN_DataDir
           value: /app/Server/RavenData
@@ -129,9 +131,11 @@ spec:
         - name: ravendb-setup-package
           secret:
             secretName: ravendb-setup-package
+        {{ if ( $.Values.useTempLocalStorage )}}
         - name: ravendb-temp-local-storage
           persistentVolumeClaim:
              claimName: temp-local-storage
+        {{ end }}
 
   volumeClaimTemplates:
     - metadata:

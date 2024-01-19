@@ -6,7 +6,6 @@ metadata:
 spec:
   accessModes: ["ReadWriteOnce"]
   storageClassName: local-disk
-  volumeBindingMode: Immediate
   resources:
     requests:
-      storage: 20Gi
+      storage: {{ $.Values.tempLocalStorageSize }}
