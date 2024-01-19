@@ -1,0 +1,12 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: temp-local-storage
+  namespace: ravendb
+  annotations:
+    volume.beta.kubernetes.io/storage-class: local-disk
+spec:
+  accessModes: ["ReadWriteOnce"]
+  resources:
+    requests:
+      storage: 20Gi

@@ -113,7 +113,7 @@ spec:
             mountPath: /usr/ravendb
           - name: ravendb-certs
             mountPath: /ravendb/certs
-          - name: temp-local-storage
+          - name: ravendb-temp-local-storage
             mountPath: /RavenTemp/
           - name: ravendb
             mountPath: /app/Server/RavenData
@@ -129,6 +129,8 @@ spec:
         - name: ravendb-setup-package
           secret:
             secretName: ravendb-setup-package
+        - name: ravendb-temp-local-storage
+          persistentVolumeClaim: temp-local-storage
 
   volumeClaimTemplates:
     - metadata:
@@ -139,14 +141,5 @@ spec:
         resources:
           requests:
             storage: {{ $.Values.storageSize }}
-    - metadata:
-        name: temp-local-storage
-        annotations:
-          volume.beta.kubernetes.io/storage-class: local-disk
-      spec:
-        accessModes: ["ReadWriteOnce"]
-        resources:
-          requests:
-            storage: 20Gi
 ---
 {{- end }}
