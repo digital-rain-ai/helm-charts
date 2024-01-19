@@ -89,7 +89,7 @@ spec:
         - name: RAVEN_PublicServerUrl_Tcp
           value: "tcp://{{ . | lower }}-tcp.{{$.Values.domain}}:443"
 
-        {{ if ( $.Values.useTempLocalStorage )}}
+        {{ if ( default $.Values.useTempLocalStorage true)}}
         - name: RAVEN_Storage_TempPath
           value: "/RavenTemp/ravendb-storage-temp-{{ . | lower }}"
 
@@ -131,7 +131,7 @@ spec:
         - name: ravendb-setup-package
           secret:
             secretName: ravendb-setup-package
-        {{ if ( $.Values.useTempLocalStorage )}}
+        {{ if ( default $.Values.useTempLocalStorage true)}}
         - name: ravendb-temp-local-storage
           persistentVolumeClaim:
              claimName: temp-local-storage
