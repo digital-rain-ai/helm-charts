@@ -115,8 +115,10 @@ spec:
             mountPath: /usr/ravendb
           - name: ravendb-certs
             mountPath: /ravendb/certs
+          {{- if ( $.Values.useTempLocalStorage )}}
           - name: ravendb-temp-local-storage
             mountPath: /RavenTemp/
+          {{- end }}
           - name: ravendb
             mountPath: /app/Server/RavenData
 
