@@ -89,10 +89,10 @@ spec:
         - name: RAVEN_PublicServerUrl_Tcp
           value: "tcp://{{ . | lower }}-tcp.{{$.Values.domain}}:443"
 
-        - name: RAVEN_Storage_Temp_Path
+        - name: RAVEN_Storage_TempPath
           value: "/RavenTemp/ravendb-storage-temp-{{ . | lower }}"
 
-        - name: RAVEN_Indexing_Temp_Path
+        - name: RAVEN_Indexing_TempPath
           value: "/RavenTemp/ravendb-indexing-temp-{{ . | lower }}"
 
         - name: RAVEN_DataDir
