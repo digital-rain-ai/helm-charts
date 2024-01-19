@@ -130,7 +130,8 @@ spec:
           secret:
             secretName: ravendb-setup-package
         - name: ravendb-tempdir
-          emptyDir: {}
+          hostPath:
+            path: /host/mnt/
 
   volumeClaimTemplates:
     - metadata:
