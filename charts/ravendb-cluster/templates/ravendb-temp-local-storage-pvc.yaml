@@ -1,4 +1,4 @@
-{{ if ( default $.Values.useTempLocalStorage true)}}
+{{- if ( $.Values.useTempLocalStorage )}}
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
@@ -10,4 +10,4 @@ spec:
   resources:
     requests:
       storage: {{ $.Values.tempLocalStorageSize }}
-{{ end }}
+{{- end }}
