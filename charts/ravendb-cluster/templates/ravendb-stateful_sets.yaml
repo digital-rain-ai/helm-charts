@@ -130,7 +130,8 @@ spec:
           secret:
             secretName: ravendb-setup-package
         - name: ravendb-temp-local-storage
-          persistentVolumeClaim: temp-local-storage
+          persistentVolumeClaim:
+             claimName: temp-local-storage
 
   volumeClaimTemplates:
     - metadata:
