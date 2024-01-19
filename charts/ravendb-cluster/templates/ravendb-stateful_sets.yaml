@@ -89,6 +89,12 @@ spec:
         - name: RAVEN_PublicServerUrl_Tcp
           value: "tcp://{{ . | lower }}-tcp.{{$.Values.domain}}:443"
 
+        - name: RAVEN_Storage_Temp_Path
+          value: "/RavenTemp/ravendb-storage-temp-{{ . | lower }}"
+
+        - name: RAVEN_Indexing_Temp_Path
+          value: "/RavenTemp/ravendb-indexing-temp-{{ . | lower }}"
+
         - name: RAVEN_DataDir
           value: /app/Server/RavenData
 
@@ -107,7 +113,9 @@ spec:
             mountPath: /usr/ravendb
           - name: ravendb-certs
             mountPath: /ravendb/certs
-          - name: "ravendb"
+          - name: ravendb-tempdir
+            mountPath: /RavenTemp/
+          - name: ravendb
             mountPath: /app/Server/RavenData
 
       volumes:
@@ -121,6 +129,8 @@ spec:
         - name: ravendb-setup-package
           secret:
             secretName: ravendb-setup-package
+        - name: ravendb-tempdir
+          emptyDir: {}
 
   volumeClaimTemplates:
     - metadata:
