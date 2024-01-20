@@ -136,7 +136,7 @@ spec:
         {{- if ( $.Values.useTempLocalStorage )}}
         - name: ravendb-temp-local-storage
           ephemeral:
-            persistentVolumeClaim:
+            volumeClaimTemplate:
               spec:
                 accessModes: [ "ReadWriteOnce" ]
                 storageClassName: "local-disk"
