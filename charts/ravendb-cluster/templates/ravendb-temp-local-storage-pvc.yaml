@@ -1,13 +1,13 @@
-{{- if ( $.Values.useTempLocalStorage )}}
-kind: PersistentVolumeClaim
-apiVersion: v1
-metadata:
-  name: temp-local-storage
-  namespace: ravendb
-spec:
-  accessModes: ["ReadWriteOnce"]
-  storageClassName: local-disk
-  resources:
-    requests:
-      storage: {{ $.Values.tempLocalStorageSize }}
-{{- end }}
+#{{- if ( $.Values.useTempLocalStorage )}}
+#kind: PersistentVolumeClaim
+#apiVersion: v1
+#metadata:
+#  name: temp-local-storage
+#  namespace: ravendb
+#spec:
+#  accessModes: ["ReadWriteOnce"]
+#  storageClassName: local-disk
+#  resources:
+#    requests:
+#      storage: {{ $.Values.tempLocalStorageSize }}
+#{{- end }}
