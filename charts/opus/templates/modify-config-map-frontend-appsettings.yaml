@@ -10,7 +10,7 @@ data:
     {
       "Logging": {
         "LogLevel": {
-          "Default": {{ .Values.clientDefaultLogLevel }}
+          "Default": "{{ .Values.clientDefaultLogLevel }}"
         }
       },
       "Google": {
