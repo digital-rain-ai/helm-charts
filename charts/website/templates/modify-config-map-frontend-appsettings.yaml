@@ -6,22 +6,22 @@ metadata:
     app.kubernetes.io/instance: {{ .Release.Name }}
     helm.sh/chart: "{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}"
 data:
-  appsettings.json: |-
+  appsettings.json: |
     {
       "Logging": {
         "LogLevel": {
-          "Default": "{{ .Values.clientDefaultLogLevel }}"
+          "Default": {{ .Values.clientDefaultLogLevel | quote }}
         }
       },
-      "AppUrl": "{{ .Values.clientAppUrl }}",
+      "AppUrl": {{ .Values.clientAppUrl | quote }},
       "DemoLogin": {
-        "BaseAddress": "{{ .Values.clientDemoLoginBaseAddress }}",
-        "ClientId": "{{ .Values.clientDemoLoginClientId }}",
-        "ClientSecret": "{{ .Values.clientDemoLoginClientSecret }}",
-        "UserName": "{{ .Values.clientDemoLoginUserName }}",
-        "Password": "{{ .Values.clientDemoLoginPassword }}"
+        "BaseAddress": {{ .Values.clientDemoLoginBaseAddress | quote }},
+        "ClientId": {{ .Values.clientDemoLoginClientId | quote }},
+        "ClientSecret": {{ .Values.clientDemoLoginClientSecret | quote }},
+        "UserName": {{ .Values.clientDemoLoginUserName | quote }},
+        "Password": {{ .Values.clientDemoLoginPassword | quote }}
       },
       "ApplicationInsights": {
-        "ConnectionString": "{{ .Values.clientApplicationInsightsConnectionString }}"
+        "ConnectionString": {{ .Values.clientApplicationInsightsConnectionString | quote }}
       }
     }

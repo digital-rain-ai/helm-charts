@@ -6,17 +6,17 @@ metadata:
     app.kubernetes.io/instance: {{ .Release.Name }}
     helm.sh/chart: "{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}"
 data:
-  appsettings.json: |-
+  appsettings.json: |
     {
       "Logging": {
         "LogLevel": {
-          "Default": "{{ .Values.clientDefaultLogLevel }}"
+          "Default": {{ .Values.clientDefaultLogLevel | quote }}
         }
       },
       "Google": {
-        "ApiKey": "{{ .Values.clientGoogleApiKey }}"
+        "ApiKey": {{ .Values.clientGoogleApiKey | quote }}
       },
       "ApplicationInsights": {
-        "ConnectionString": "{{ .Values.clientApplicationInsightsConnectionString }}"
+        "ConnectionString": {{ .Values.clientApplicationInsightsConnectionString | quote }}
       }
     }
