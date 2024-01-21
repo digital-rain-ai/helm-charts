@@ -55,6 +55,9 @@ spec:
               port: http
           {{- with .Values.volumeMounts }}
           volumeMounts:
+            - name: frontend-appsettings-volume
+              mountPath: /app/wwwroot/appsettings.json
+              subPath: appsettings.json
             {{- toYaml . | nindent 12 }}
           {{- end }}
           {{- with .Values.env }}
@@ -77,5 +80,8 @@ spec:
       {{- end }}
       {{- with .Values.volumes }}
       volumes:
+        - name: frontend-appsettings-volume
+          configMap:
+            name: frontend-appsettings
         {{- toYaml . | nindent 8 }}
       {{- end }}

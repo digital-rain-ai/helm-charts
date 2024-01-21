@@ -90,6 +90,10 @@ env:
   - name: "PathBase"
     value: "/app"
 
+clientDefaultLogLevel: "Warning"
+clientGoogleApiKey: ""
+clientApplicationInsightsConnectionString: ""
+
 startupProbe:
   httpGet:
     path: "/healthz/live"
