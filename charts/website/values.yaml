@@ -86,15 +86,6 @@ volumes: []
 
 volumeMounts: []
 
-clientDefaultLogLevel: "Warning"
-clientAppUrl: "/app"
-clientDemoLoginBaseAddress: "identity/"
-clientDemoLoginClientId: ""
-clientDemoLoginClientSecret: ""
-clientDemoLoginUserName: ""
-clientDemoLoginPassword: ""
-clientApplicationInsightsConnectionString: ""
-
 startupProbe:
   httpGet:
     path: "/healthz/live"
