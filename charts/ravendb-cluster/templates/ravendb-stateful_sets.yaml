@@ -30,6 +30,12 @@ spec:
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
+
+      {{- with $.Values.topologySpreadConstraints }}
+      topologySpreadConstraints:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+
       initContainers:
       - name: "{{$.Chart.Name}}-init"
         image: "alpine:3.19.0"

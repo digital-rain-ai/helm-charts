@@ -18,6 +18,11 @@ setupMode: LetsEncrypt
 license: '{}'
 imagePullSecrets: []
 
+topologySpreadConstraints:
+- maxSkew: 1
+  topologyKey: topology.kubernetes.io/zone
+  whenUnsatisfiable: DoNotSchedule
+
 # Server-wide Backup configuration
 backupEnabled: false
 backupTaskName: "Periodic Backup"
