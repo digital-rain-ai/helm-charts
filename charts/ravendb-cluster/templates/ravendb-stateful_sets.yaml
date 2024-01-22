@@ -150,11 +150,6 @@ spec:
                   requests:
                     storage: {{ $.Values.tempLocalStorageSize }}
         {{- end }}
-        #{{- if ( $.Values.useTempLocalStorage )}}
-        #- name: ravendb-temp-local-storage
-        #  persistentVolumeClaim:
-        #     claimName: temp-local-storage
-        #{{- end }}
 
   volumeClaimTemplates:
     - metadata:
