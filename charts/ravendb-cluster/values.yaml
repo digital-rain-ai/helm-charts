@@ -18,7 +18,7 @@ setupMode: LetsEncrypt
 license: '{}'
 imagePullSecrets: []
 
-topologySpreadConstraints:
+topologySpreadConstraints: []
 
 # Server-wide Backup configuration
 backupEnabled: false
