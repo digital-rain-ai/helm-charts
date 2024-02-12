@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   identity-server:
   - apiVersion: v2
+    appVersion: 1.2171.1
+    created: "2024-02-12T20:07:44.475240573Z"
+    description: A Helm chart for Identity Server
+    digest: 94a5dedb30cb4da1f88a234602ee134378e25d16b17ce1b86e88cd2a46164391
+    name: identity-server
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/identity-server-0.5.35/identity-server-0.5.35.tgz
+    version: 0.5.35
+  - apiVersion: v2
     appVersion: 1.2163.1
     created: "2024-02-09T00:29:31.202764741Z"
     description: A Helm chart for Identity Server
@@ -1333,6 +1343,16 @@ entries:
     version: 0.1.1
   iot:
   - apiVersion: v2
+    appVersion: 1.2171.1
+    created: "2024-02-12T20:07:44.739065438Z"
+    description: A Helm chart for Opus IoT
+    digest: 42d52b3df93d7c60b76b4fdaa3f88a72bb58b0927f075fa1cd6a6b1685e70088
+    name: iot
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/iot-0.5.35/iot-0.5.35.tgz
+    version: 0.5.35
+  - apiVersion: v2
     appVersion: 1.2163.1
     created: "2024-02-09T00:29:31.31269676Z"
     description: A Helm chart for Opus IoT
@@ -2543,6 +2563,16 @@ entries:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/iot-0.1.0/iot-0.1.0.tgz
     version: 0.1.0
   opus:
+  - apiVersion: v2
+    appVersion: 1.2171.1
+    created: "2024-02-12T20:07:44.942254005Z"
+    description: A Helm chart for Opus
+    digest: 97aa48fc1a00f76dbdeecd5f8f931428b6459c56c899d4655fea64c6e26696f4
+    name: opus
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/opus-0.6.13/opus-0.6.13.tgz
+    version: 0.6.13
   - apiVersion: v2
     appVersion: 1.2163.1
     created: "2024-02-09T00:29:31.430684608Z"
@@ -5168,6 +5198,16 @@ entries:
     version: 0.1.0
   website:
   - apiVersion: v2
+    appVersion: 1.2171.1
+    created: "2024-02-12T20:07:45.128881748Z"
+    description: A Helm chart for the Opus website
+    digest: 48902d1d69ffb71e8711ca2443ff1baaa980e87d5a6cc10d3fb8230cf460111b
+    name: website
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.6.13/website-0.6.13.tgz
+    version: 0.6.13
+  - apiVersion: v2
     appVersion: 1.2163.1
     created: "2024-02-09T00:29:31.542106298Z"
     description: A Helm chart for the Opus website
@@ -6527,4 +6567,4 @@ entries:
     urls:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.1.1/website-0.1.1.tgz
     version: 0.1.1
-generated: "2024-02-09T00:29:31.543586854Z"
+generated: "2024-02-12T20:07:45.130456571Z"
