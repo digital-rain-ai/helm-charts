@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   identity-server:
   - apiVersion: v2
+    appVersion: 1.2368.1
+    created: "2024-04-23T17:39:22.554477709Z"
+    description: A Helm chart for Identity Server
+    digest: e3d26f31dbb75baade3298bd0e7e697dbf5f4a91d6aa65c3e53778532f4cb414
+    name: identity-server
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/identity-server-0.8.6/identity-server-0.8.6.tgz
+    version: 0.8.6
+  - apiVersion: v2
     appVersion: 1.2364.2
     created: "2024-04-22T21:00:18.174176413Z"
     description: A Helm chart for Identity Server
@@ -1613,6 +1623,16 @@ entries:
     version: 0.1.1
   iot:
   - apiVersion: v2
+    appVersion: 1.2368.1
+    created: "2024-04-23T17:39:22.671558782Z"
+    description: A Helm chart for Opus IoT
+    digest: a6b455c23bf0fae6a8b591dd224920430ec956cb564e8c23212ee123a713df97
+    name: iot
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/iot-0.8.6/iot-0.8.6.tgz
+    version: 0.8.6
+  - apiVersion: v2
     appVersion: 1.2364.2
     created: "2024-04-22T21:00:18.287320822Z"
     description: A Helm chart for Opus IoT
@@ -3103,6 +3123,16 @@ entries:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/iot-0.1.0/iot-0.1.0.tgz
     version: 0.1.0
   opus:
+  - apiVersion: v2
+    appVersion: 1.2368.1
+    created: "2024-04-23T17:39:22.794731766Z"
+    description: A Helm chart for Opus
+    digest: 2cd1f6f26ead273d6d027b04e6f7bb382cce23a9767f5d323d7b6b41335ba459
+    name: opus
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/opus-0.8.6/opus-0.8.6.tgz
+    version: 0.8.6
   - apiVersion: v2
     appVersion: 1.2364.2
     created: "2024-04-22T21:00:18.381184382Z"
@@ -5036,6 +5066,15 @@ entries:
   ravendb-cluster:
   - apiVersion: v1
     appVersion: "6.0"
+    created: "2024-04-23T17:39:22.927862202Z"
+    description: Chart for RavenDB Cluster
+    digest: 071588bdec93eb4179bcec40c61e6dbdbcd233146326ad5c817c5f3789e4dab2
+    name: ravendb-cluster
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/ravendb-cluster-0.8.6/ravendb-cluster-0.8.6.tgz
+    version: 0.8.6
+  - apiVersion: v1
+    appVersion: "6.0"
     created: "2024-04-09T23:08:07.080853862Z"
     description: Chart for RavenDB Cluster
     digest: b3c044022e2e2ecceb96ceef77615952fe6cf820e6952ccdcbd2860f4eff6e77
@@ -6079,6 +6118,16 @@ entries:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/ravendb-cluster-0.1.0/ravendb-cluster-0.1.0.tgz
     version: 0.1.0
   website:
+  - apiVersion: v2
+    appVersion: 1.2368.1
+    created: "2024-04-23T17:39:23.025987206Z"
+    description: A Helm chart for the Opus website
+    digest: 9c89c9286c22515b023f8b185ddb6f9be0a95f2abbb2a4d65b796d496585a306
+    name: website
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.8.6/website-0.8.6.tgz
+    version: 0.8.6
   - apiVersion: v2
     appVersion: 1.2364.2
     created: "2024-04-22T21:00:18.517443361Z"
@@ -7729,4 +7778,4 @@ entries:
     urls:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.1.1/website-0.1.1.tgz
     version: 0.1.1
-generated: "2024-04-22T21:00:18.519147921Z"
+generated: "2024-04-23T17:39:23.027864968Z"
