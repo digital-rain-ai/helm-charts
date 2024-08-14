@@ -86,13 +86,13 @@ volumes: []
 volumeMounts: []
 
 env:
-  - name: "PathBase"
+  - name: "FLUIDX3D_PATHBASE"
     value: "/cfd"
 
-#livenessProbe:
-#  httpGet:
-#    path: "/healthz/live"
+livenessProbe:
+  httpGet:
+    path: "/healthz/live"
 
-#readinessProbe:
-#  httpGet:
-#    path: "/healthz/ready"
+readinessProbe:
+  httpGet:
+    path: "/healthz/ready"
