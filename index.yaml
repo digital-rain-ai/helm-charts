@@ -5867,6 +5867,15 @@ entries:
   ravendb-cluster:
   - apiVersion: v1
     appVersion: "6.0"
+    created: "2024-08-14T13:59:14.156849066Z"
+    description: Chart for RavenDB Cluster
+    digest: eef082380eb8a0edbedfd7e96dbcb8ddb62c2981fbb6bf0b09e291b865fe004f
+    name: ravendb-cluster
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/ravendb-cluster-0.10.1/ravendb-cluster-0.10.1.tgz
+    version: 0.10.1
+  - apiVersion: v1
+    appVersion: "6.0"
     created: "2024-07-29T09:33:32.508225309Z"
     description: Chart for RavenDB Cluster
     digest: 2a0daadeb7d93763ccf71ad14bb41f86982e9753e91f7ef3b48557380dc28036
@@ -8848,4 +8857,4 @@ entries:
     urls:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.1.1/website-0.1.1.tgz
     version: 0.1.1
-generated: "2024-08-14T09:04:31.4571701Z"
+generated: "2024-08-14T13:59:14.158117696Z"
