@@ -110,7 +110,7 @@ spec:
         {{ if ( $.Values.environment )}}
         {{- range $key, $val := $.Values.environment }}
         - name: {{ $key }}
-          value: {{ $val }}
+          value: {{ quote $val }}
         {{ end -}}
         {{ end }}
 
