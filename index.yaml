@@ -33,6 +33,16 @@ entries:
     version: 0.10.7
   identity-server:
   - apiVersion: v2
+    appVersion: 1.2808.2
+    created: "2024-09-19T09:29:33.57374925Z"
+    description: A Helm chart for Identity Server
+    digest: 2fee6510295c80a8d3f4b96b976c5743430c86804a53adbffa4cf23e38a61e2a
+    name: identity-server
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/identity-server-0.10.22/identity-server-0.10.22.tgz
+    version: 0.10.22
+  - apiVersion: v2
     appVersion: 1.2799.2
     created: "2024-09-18T23:01:48.521032914Z"
     description: A Helm chart for Identity Server
@@ -2044,6 +2054,16 @@ entries:
     version: 0.1.1
   iot:
   - apiVersion: v2
+    appVersion: 1.2808.2
+    created: "2024-09-19T09:29:33.724777008Z"
+    description: A Helm chart for Opus IoT
+    digest: 95c3d3cd10b86be238d2fcfd5a79a9f2a66a8c037f791549c8e085fe598bc05d
+    name: iot
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/iot-0.10.22/iot-0.10.22.tgz
+    version: 0.10.22
+  - apiVersion: v2
     appVersion: 1.2799.2
     created: "2024-09-18T23:01:48.624387966Z"
     description: A Helm chart for Opus IoT
@@ -3934,6 +3954,16 @@ entries:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/iot-0.1.0/iot-0.1.0.tgz
     version: 0.1.0
   opus:
+  - apiVersion: v2
+    appVersion: 1.2808.2
+    created: "2024-09-19T09:29:33.871873417Z"
+    description: A Helm chart for Opus
+    digest: 556291615ca8ca5a77abda53710b819cc1a00b4fc06c03fdab6fce3b1bb5c416
+    name: opus
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/opus-0.10.22/opus-0.10.22.tgz
+    version: 0.10.22
   - apiVersion: v2
     appVersion: 1.2799.2
     created: "2024-09-18T23:01:48.750603431Z"
@@ -9377,4 +9407,4 @@ entries:
     urls:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.1.1/website-0.1.1.tgz
     version: 0.1.1
-generated: "2024-09-18T23:01:48.754084177Z"
+generated: "2024-09-19T09:29:33.873670754Z"
