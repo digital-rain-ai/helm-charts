@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   fluidx3d:
   - apiVersion: v2
+    appVersion: 1.2847.1
+    created: "2024-09-25T21:04:21.402760839Z"
+    description: A Helm chart for FluidX3D
+    digest: 25e93280d6c915de1f1677561a2b22bdc96ba6644db5e67cec55be6293424ea1
+    name: fluidx3d
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/fluidx3d-0.10.35/fluidx3d-0.10.35.tgz
+    version: 0.10.35
+  - apiVersion: v2
     appVersion: 1.2845.1
     created: "2024-09-25T19:14:42.92164187Z"
     description: A Helm chart for FluidX3D
@@ -42,6 +52,16 @@ entries:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/fluidx3d-0.10.7/fluidx3d-0.10.7.tgz
     version: 0.10.7
   grafana:
+  - apiVersion: v2
+    appVersion: 1.2847.1
+    created: "2024-09-25T21:04:21.530404426Z"
+    description: A Helm chart for Grafana
+    digest: bed928a0ee625b365aaad628af90e93b22ea86f576bb86cdd0323ad8fb2f0eb0
+    name: grafana
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/grafana-0.10.35/grafana-0.10.35.tgz
+    version: 0.10.35
   - apiVersion: v2
     appVersion: 1.2845.1
     created: "2024-09-25T19:14:43.075695394Z"
@@ -133,6 +153,16 @@ entries:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/grafana-0.10.26/grafana-0.10.26.tgz
     version: 0.10.26
   identity-server:
+  - apiVersion: v2
+    appVersion: 1.2847.1
+    created: "2024-09-25T21:04:21.663488853Z"
+    description: A Helm chart for Identity Server
+    digest: 095f53fe8c408a9848c60725e76e2dddadc940912823985bf3b68fb692cc1ee3
+    name: identity-server
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/identity-server-0.10.35/identity-server-0.10.35.tgz
+    version: 0.10.35
   - apiVersion: v2
     appVersion: 1.2845.1
     created: "2024-09-25T19:14:43.212162518Z"
@@ -2205,6 +2235,16 @@ entries:
     version: 0.1.1
   iot:
   - apiVersion: v2
+    appVersion: 1.2847.1
+    created: "2024-09-25T21:04:21.860920987Z"
+    description: A Helm chart for Opus IoT
+    digest: f6b543eae390c1019050826e053423b9a5384832a7857d576e8db07cee48470c
+    name: iot
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/iot-0.10.35/iot-0.10.35.tgz
+    version: 0.10.35
+  - apiVersion: v2
     appVersion: 1.2845.1
     created: "2024-09-25T19:14:43.371589394Z"
     description: A Helm chart for Opus IoT
@@ -4155,6 +4195,16 @@ entries:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/iot-0.1.0/iot-0.1.0.tgz
     version: 0.1.0
   opus:
+  - apiVersion: v2
+    appVersion: 1.2847.1
+    created: "2024-09-25T21:04:22.010315903Z"
+    description: A Helm chart for Opus
+    digest: 155cd4dda7733a4488e7d2d7062fadfa3b55ea2dda46e4dbab94147c6b740f5f
+    name: opus
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/opus-0.10.35/opus-0.10.35.tgz
+    version: 0.10.35
   - apiVersion: v2
     appVersion: 1.2845.1
     created: "2024-09-25T19:14:43.506978502Z"
@@ -7628,6 +7678,16 @@ entries:
     version: 0.1.0
   website:
   - apiVersion: v2
+    appVersion: 1.2847.1
+    created: "2024-09-25T21:04:22.150700081Z"
+    description: A Helm chart for the Opus website
+    digest: 8f83d4e43eb061519f14398171ebe8ef56ca8c09393fb4d84cb5781a331fe11e
+    name: website
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.10.35/website-0.10.35.tgz
+    version: 0.10.35
+  - apiVersion: v2
     appVersion: 1.2845.1
     created: "2024-09-25T19:14:43.648577778Z"
     description: A Helm chart for the Opus website
@@ -9717,4 +9777,4 @@ entries:
     urls:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.1.1/website-0.1.1.tgz
     version: 0.1.1
-generated: "2024-09-25T19:14:43.651531661Z"
+generated: "2024-09-25T21:04:22.152926761Z"
