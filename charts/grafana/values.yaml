@@ -85,14 +85,10 @@ volumes: []
 
 volumeMounts: []
 
-env:
-  - name: "PathBase"
-    value: "/grafana"
+#livenessProbe:
+#  httpGet:
+#    path: "/grafana/healthz"
 
-livenessProbe:
-  httpGet:
-    path: "/grafana/healthz"
-
-readinessProbe:
-  httpGet:
-    path: "/grafana/robots.txt"
+#readinessProbe:
+#  httpGet:
+#    path: "/grafana/robots.txt"
