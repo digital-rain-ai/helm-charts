@@ -85,10 +85,10 @@ volumes: []
 
 volumeMounts: []
 
-#livenessProbe:
-#  httpGet:
-#    path: "/grafana/healthz"
+livenessProbe:
+  httpGet:
+    path: "/grafana/healthz"
 
-#readinessProbe:
-#  httpGet:
-#    path: "/grafana/robots.txt"
+readinessProbe:
+  httpGet:
+    path: "/grafana/robots.txt"
