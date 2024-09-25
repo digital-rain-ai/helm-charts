@@ -31,6 +31,17 @@ entries:
     urls:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/fluidx3d-0.10.7/fluidx3d-0.10.7.tgz
     version: 0.10.7
+  grafana:
+  - apiVersion: v2
+    appVersion: 1.2838.1
+    created: "2024-09-25T08:38:42.135967119Z"
+    description: A Helm chart for Grafana
+    digest: c5fb1bd9d7bf8febce80bc90143a7886405f2b55a4c7fcbd8faa5da2e5493667
+    name: grafana
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/grafana-0.10.26/grafana-0.10.26.tgz
+    version: 0.10.26
   identity-server:
   - apiVersion: v2
     appVersion: 1.2838.1
@@ -9536,4 +9547,4 @@ entries:
     urls:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.1.1/website-0.1.1.tgz
     version: 0.1.1
-generated: "2024-09-24T20:12:38.185809056Z"
+generated: "2024-09-25T08:38:42.138091744Z"
