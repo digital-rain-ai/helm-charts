@@ -53,6 +53,16 @@ entries:
     version: 0.10.7
   grafana:
   - apiVersion: v2
+    appVersion: 1.2938.1
+    created: "2024-10-22T08:38:19.416919018Z"
+    description: A Helm chart for Grafana
+    digest: fae8bdcd47aac63a34eee893fd61a7396300a6d765d88eacd93bc62404978495
+    name: grafana
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/grafana-0.10.47/grafana-0.10.47.tgz
+    version: 0.10.47
+  - apiVersion: v2
     appVersion: 1.2847.1
     created: "2024-09-25T21:04:21.530404426Z"
     description: A Helm chart for Grafana
@@ -10257,4 +10267,4 @@ entries:
     urls:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.1.1/website-0.1.1.tgz
     version: 0.1.1
-generated: "2024-10-22T06:40:50.917987856Z"
+generated: "2024-10-22T08:38:19.418274673Z"
