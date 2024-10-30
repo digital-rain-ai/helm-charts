@@ -16,7 +16,7 @@ spec:
     - match: HostSNI(`{{ lower . }}.{{$.Values.domain}}`)
       services:
       - name: ravendb-{{ . | lower}}
-        port: 8080
+        port: 443
         terminationDelay: 400
     - match: HostSNI(`{{ lower . }}-tcp.{{$.Values.domain}}`)
       services:
