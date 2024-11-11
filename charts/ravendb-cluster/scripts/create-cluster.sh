@@ -13,13 +13,13 @@ BACKUP_AZURE_SasTokenSecretName=$8
 
 echo "Installing prerequisites..."
 
-if command -v apk 2>&1 >/dev/null
-then
-    apk add --update curl unzip jq openssl findutils
-else
+#if command -v apk 2>&1 >/dev/null
+#then
+#    apk add --update curl unzip jq openssl findutils
+#else
     apt-get update
     apt-get install curl unzip jq openssl findutils -y
-end
+#end
 
 case `uname -m` in
     x86_64) ARCH=amd64; ;;
