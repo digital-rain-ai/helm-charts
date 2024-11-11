@@ -1,9 +1,15 @@
 #!/usr/bin/env sh
 set -e
 
-KUBECTL_VERSION=1.26.10
+KUBECTL_VERSION=1.29.10
 
-apk add --update curl unzip jq sudo
+if command -v apk 2>&1 >/dev/null
+then
+    apk add --update curl unzip jq sudo
+else
+    apt-get update
+    apt-get install curl unzip jq -y
+end
 
 case `uname -m` in
     x86_64) ARCH=amd64; ;;

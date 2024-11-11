@@ -7,7 +7,14 @@ function update_secret {
 
     # install depts
     echo "Installing curl sudo and jq..."
-    apk add --update curl jq sudo
+
+    if command -v apk 2>&1 >/dev/null
+    then
+        apk add --update curl jq sudo
+    else
+        apt-get update
+        apt-get install curl jq -y
+    end
 
     case `uname -m` in
         x86_64) ARCH=amd64; ;;

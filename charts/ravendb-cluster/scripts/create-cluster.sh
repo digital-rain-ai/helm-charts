@@ -16,6 +16,14 @@ KUBECTL_VERSION=1.26.10
 echo "Installing prerequisites..."
 apk add --update curl unzip jq openssl findutils
 
+if command -v apk 2>&1 >/dev/null
+then
+    apk add --update curl unzip jq openssl findutils
+else
+    apt-get update
+    apt-get install curl unzip jq openssl findutils -y
+end
+
 case `uname -m` in
     x86_64) ARCH=amd64; ;;
     armv7l) ARCH=arm; ;;
