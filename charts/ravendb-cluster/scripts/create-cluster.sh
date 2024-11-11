@@ -11,8 +11,6 @@ BACKUP_AZURE_StorageContainer=$6
 BACKUP_AZURE_AccountName=$7
 BACKUP_AZURE_SasTokenSecretName=$8
 
-KUBECTL_VERSION=1.26.10
-
 echo "Installing prerequisites..."
 apk add --update curl unzip jq openssl findutils
 
@@ -33,7 +31,7 @@ case `uname -m` in
     *) echo "un-supported arch, exit ..."; exit 1; ;;
 esac
 
-curl -sLO https://storage.googleapis.com/kubernetes-release/release/v${KUBECTL_VERSION}/bin/linux/${ARCH}/kubectl
+curl -sLO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/${ARCH}/kubectl"
 mv kubectl /usr/local/bin/kubectl
 chmod +x /usr/local/bin/kubectl
 

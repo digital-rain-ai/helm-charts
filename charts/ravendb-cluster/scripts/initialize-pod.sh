@@ -1,15 +1,7 @@
 #!/usr/bin/env sh
 set -e
 
-KUBECTL_VERSION=1.29.10
-
-if command -v apk 2>&1 >/dev/null
-then
-    apk add --update curl unzip jq sudo
-else
-    apt-get update
-    apt-get install curl unzip jq -y
-end
+apk add --update curl unzip jq sudo
 
 case `uname -m` in
     x86_64) ARCH=amd64; ;;
@@ -20,7 +12,7 @@ case `uname -m` in
     *) echo "un-supported arch, exit ..."; exit 1; ;;
 esac
 
-curl -sLO https://storage.googleapis.com/kubernetes-release/release/v${KUBECTL_VERSION}/bin/linux/${ARCH}/kubectl
+curl -sLO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/${ARCH}/kubectl"
 mv kubectl /usr/local/bin/kubectl
 chmod +x /usr/local/bin/kubectl
 
