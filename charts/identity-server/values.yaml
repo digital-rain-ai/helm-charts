@@ -38,7 +38,7 @@ securityContext: {}
 
 service:
   type: ClusterIP
-  port: 8080
+  port: 443
 
 ingressRoute:
   enabled: true
@@ -93,7 +93,9 @@ env:
 livenessProbe:
   httpGet:
     path: "/healthz/live"
+    scheme: HTTPS
 
 readinessProbe:
   httpGet:
     path: "/healthz/ready"
+    scheme: HTTPS
