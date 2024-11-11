@@ -99,9 +99,7 @@ startupProbe:
 livenessProbe:
   httpGet:
     path: "/healthz/live"
-    scheme: HTTPS
 
 readinessProbe:
   httpGet:
     path: "/healthz/ready"
-    scheme: HTTPS
