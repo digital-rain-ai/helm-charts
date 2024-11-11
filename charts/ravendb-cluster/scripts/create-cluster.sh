@@ -12,7 +12,6 @@ BACKUP_AZURE_AccountName=$7
 BACKUP_AZURE_SasTokenSecretName=$8
 
 echo "Installing prerequisites..."
-apk add --update curl unzip jq openssl findutils
 
 if command -v apk 2>&1 >/dev/null
 then
