@@ -8,8 +8,12 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: http
+      targetPort: https
       protocol: TCP
-      name: http
+      name: https
+    - port: {{ .Values.service.port }}
+      targetPort: http3
+      protocol: UDP
+      name: http3
   selector:
     {{- include "opus.selectorLabels" . | nindent 4 }}
