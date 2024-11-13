@@ -8,19 +8,19 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: http
+      targetPort: https
       protocol: TCP
-      name: http
+      name: https
     - port: {{ .Values.service.port }}
       targetPort: 443
       protocol: UDP
       name: http3
     #- port: 1883
-    #  targetPort: 443
+    #  targetPort: 1883
     #  protocol: TCP
     #  name: mqtt
     - port: 8883
-      targetPort: 443
+      targetPort: 8883
       protocol: TCP
       name: mqtts
   selector:
