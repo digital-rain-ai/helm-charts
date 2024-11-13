@@ -56,6 +56,12 @@ ingressRoute:
   # TLS options (e.g. secret containing certificate)
   tls: {}
 
+ingressRouteTCP:
+  enabled: true
+  annotations: {}
+  labels: {}
+  entryPoints: ["websecure"]
+
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
@@ -84,6 +90,8 @@ affinity: {}
 volumes: []
 
 volumeMounts: []
+
+domain: opus-test.digitalrain.ai
 
 env:
   - name: "PathBase"

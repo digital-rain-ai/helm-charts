@@ -11,5 +11,17 @@ spec:
       targetPort: http
       protocol: TCP
       name: http
+    - port: {{ .Values.service.port }}
+      targetPort: 443
+      protocol: UDP
+      name: http3
+    #- port: 1883
+    #  targetPort: 443
+    #  protocol: TCP
+    #  name: mqtt
+    - port: 8883
+      targetPort: 443
+      protocol: TCP
+      name: mqtts
   selector:
     {{- include "opus.selectorLabels" . | nindent 4 }}
