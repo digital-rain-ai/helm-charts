@@ -21,7 +21,7 @@ spec:
   routes:
   - match: HostSNI(`mqtt.{{$.Values.domain}}`)
     services:
-    - name: mqtts-{{ . | lower}}
+    - name: mqtt-iot
       port: 8883
       terminationDelay: 400
   tls:
