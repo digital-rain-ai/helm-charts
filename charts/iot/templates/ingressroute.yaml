@@ -30,11 +30,6 @@ spec:
     middlewares:
       {{- toYaml . | nindent 6 }}
     {{- end -}}
-  - match: HostSNI(`mqtt.{{$.Values.domain}}`)
-    services:
-    - name: mqtts-{{ . | lower}}
-      port: 8883
-      terminationDelay: 400
   {{- with .Values.ingressRoute.tls }}
   tls:
     {{- toYaml . | nindent 4 }}
