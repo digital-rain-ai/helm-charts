@@ -2515,6 +2515,16 @@ entries:
     version: 0.1.1
   iot:
   - apiVersion: v2
+    appVersion: 1.3017.1
+    created: "2024-11-15T08:08:37.996459264Z"
+    description: A Helm chart for Opus IoT
+    digest: 460c95da9becf1d5541b3346d55da8387208c8694380f697ebd08e8e3361f9ea
+    name: iot
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/iot-0.11.19/iot-0.11.19.tgz
+    version: 0.11.19
+  - apiVersion: v2
     appVersion: 1.3013.2
     created: "2024-11-14T22:46:11.801273569Z"
     description: A Helm chart for Opus IoT
@@ -4785,6 +4795,16 @@ entries:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/iot-0.1.0/iot-0.1.0.tgz
     version: 0.1.0
   opus:
+  - apiVersion: v2
+    appVersion: 1.3017.1
+    created: "2024-11-15T08:08:38.114763001Z"
+    description: A Helm chart for Opus
+    digest: 9b5a66f92735b9d8c0bc2a44384d8028174aed03a2178f744fd87c39883230b7
+    name: opus
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/opus-0.11.13/opus-0.11.13.tgz
+    version: 0.11.13
   - apiVersion: v2
     appVersion: 1.3013.2
     created: "2024-11-14T22:46:11.996814478Z"
@@ -8591,6 +8611,16 @@ entries:
     version: 0.1.0
   website:
   - apiVersion: v2
+    appVersion: 1.3017.1
+    created: "2024-11-15T08:08:38.250095511Z"
+    description: A Helm chart for the Opus website
+    digest: f1139058e2b1001ad32bd774025ae46cc20c304e42abbe2b185695693cbe3e03
+    name: website
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.11.10/website-0.11.10.tgz
+    version: 0.11.10
+  - apiVersion: v2
     appVersion: 1.3013.2
     created: "2024-11-14T22:46:12.175124291Z"
     description: A Helm chart for the Opus website
@@ -10910,4 +10940,4 @@ entries:
     urls:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.1.1/website-0.1.1.tgz
     version: 0.1.1
-generated: "2024-11-14T22:46:12.177649003Z"
+generated: "2024-11-15T08:08:38.252851696Z"
