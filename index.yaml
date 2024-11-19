@@ -2525,6 +2525,16 @@ entries:
     version: 0.1.1
   iot:
   - apiVersion: v2
+    appVersion: 1.3034.1
+    created: "2024-11-19T08:59:47.67091189Z"
+    description: A Helm chart for Opus IoT
+    digest: ca39952ee21bacbeefa7e916c9761ed8d099ab3ecb720b61334b0a558f691711
+    name: iot
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/iot-0.11.22/iot-0.11.22.tgz
+    version: 0.11.22
+  - apiVersion: v2
     appVersion: 1.3028.2
     created: "2024-11-19T00:46:13.22385943Z"
     description: A Helm chart for Opus IoT
@@ -4825,6 +4835,16 @@ entries:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/iot-0.1.0/iot-0.1.0.tgz
     version: 0.1.0
   opus:
+  - apiVersion: v2
+    appVersion: 1.3034.1
+    created: "2024-11-19T08:59:47.779481569Z"
+    description: A Helm chart for Opus
+    digest: 0c9ec997e701d6e7ec7687540a402c5e637e0be5df829a7c6c3e510737589604
+    name: opus
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/opus-0.11.16/opus-0.11.16.tgz
+    version: 0.11.16
   - apiVersion: v2
     appVersion: 1.3028.2
     created: "2024-11-19T00:46:13.335036692Z"
@@ -8661,6 +8681,16 @@ entries:
     version: 0.1.0
   website:
   - apiVersion: v2
+    appVersion: 1.3034.1
+    created: "2024-11-19T08:59:47.898041722Z"
+    description: A Helm chart for the Opus website
+    digest: 2add64b21f6edc2de14495845c2c272ec101839f220578223b2324a6b0e867c1
+    name: website
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.11.12/website-0.11.12.tgz
+    version: 0.11.12
+  - apiVersion: v2
     appVersion: 1.3028.2
     created: "2024-11-19T00:46:13.442780259Z"
     description: A Helm chart for the Opus website
@@ -11000,4 +11030,4 @@ entries:
     urls:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.1.1/website-0.1.1.tgz
     version: 0.1.1
-generated: "2024-11-19T00:46:13.445966454Z"
+generated: "2024-11-19T08:59:47.900722881Z"
