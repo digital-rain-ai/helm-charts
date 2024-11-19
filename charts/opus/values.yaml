@@ -47,7 +47,7 @@ ingressRoute:
   # Additional ingressRoute labels (e.g. for filtering IngressRoute by custom labels)
   labels: {}
   # double $$ because $ is escaped with $. Match /app or /app/, but not e.g. /appsettings.json
-  matchRule: PathPrefix(`/{path:app($$|/.*)}`)
+  matchRule: PathRegexp(`/{path:app($|/.*)}`)
   # Higher number means a higher priority. By default the priority is set to the length of the matchRule. Use this to override the default
   priority: null
   # Specify the allowed entrypoints to use for the ingress route, (e.g. traefik, web, websecure).
