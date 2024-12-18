@@ -2695,6 +2695,16 @@ entries:
     version: 0.1.1
   iot:
   - apiVersion: v2
+    appVersion: 1.3146.1
+    created: "2024-12-18T21:56:52.11330759Z"
+    description: A Helm chart for Opus IoT
+    digest: 16817df55799d81e47b2fbffa0c557a4224efad3673255ca4ff1f60e22e1d91e
+    name: iot
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/iot-0.11.32/iot-0.11.32.tgz
+    version: 0.11.32
+  - apiVersion: v2
     appVersion: 1.3140.1
     created: "2024-12-16T13:57:43.903154278Z"
     description: A Helm chart for Opus IoT
@@ -5095,6 +5105,16 @@ entries:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/iot-0.1.0/iot-0.1.0.tgz
     version: 0.1.0
   opus:
+  - apiVersion: v2
+    appVersion: 1.3146.1
+    created: "2024-12-18T21:56:52.299952558Z"
+    description: A Helm chart for Opus
+    digest: 8bba6b10dd849968388e8de9ca7a957a5109ce304f220c56c5813befd1e63996
+    name: opus
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/opus-0.11.29/opus-0.11.29.tgz
+    version: 0.11.29
   - apiVersion: v2
     appVersion: 1.3140.1
     created: "2024-12-16T13:57:44.055420672Z"
@@ -9088,6 +9108,16 @@ entries:
     version: 0.1.0
   website:
   - apiVersion: v2
+    appVersion: 1.3146.1
+    created: "2024-12-18T21:56:52.497169417Z"
+    description: A Helm chart for the Opus website
+    digest: a990112db2501ce5d6f885adda6b5ab169a7f37a2f41a3e61862f2ee3fb63022
+    name: website
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.11.24/website-0.11.24.tgz
+    version: 0.11.24
+  - apiVersion: v2
     appVersion: 1.3140.1
     created: "2024-12-16T13:57:44.192750919Z"
     description: A Helm chart for the Opus website
@@ -11547,4 +11577,4 @@ entries:
     urls:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.1.1/website-0.1.1.tgz
     version: 0.1.1
-generated: "2024-12-16T13:57:44.195226425Z"
+generated: "2024-12-18T21:56:52.500635793Z"
