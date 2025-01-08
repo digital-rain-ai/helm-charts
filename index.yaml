@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   fluidx3d:
   - apiVersion: v2
+    appVersion: 1.3159.1
+    created: "2025-01-08T00:46:57.623442718Z"
+    description: A Helm chart for FluidX3D
+    digest: 3be917e60f1b8176538703a8342958dc1fa40db80ddfe528b62c300ee80149ca
+    name: fluidx3d
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/fluidx3d-0.12.0/fluidx3d-0.12.0.tgz
+    version: 0.12.0
+  - apiVersion: v2
     appVersion: 1.3148.2
     created: "2025-01-05T15:57:51.107615305Z"
     description: A Helm chart for FluidX3D
@@ -112,6 +122,16 @@ entries:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/fluidx3d-0.10.7/fluidx3d-0.10.7.tgz
     version: 0.10.7
   grafana:
+  - apiVersion: v2
+    appVersion: 1.3159.1
+    created: "2025-01-08T00:46:57.720655456Z"
+    description: A Helm chart for Grafana
+    digest: 2a2e063746e68113f44566884f2b9b3f11f6fb951b02d1a8f63a01061dc517fe
+    name: grafana
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/grafana-0.12.0/grafana-0.12.0.tgz
+    version: 0.12.0
   - apiVersion: v2
     appVersion: 1.3148.2
     created: "2025-01-05T15:57:51.214801301Z"
@@ -323,6 +343,16 @@ entries:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/grafana-0.10.26/grafana-0.10.26.tgz
     version: 0.10.26
   identity-server:
+  - apiVersion: v2
+    appVersion: 1.3159.1
+    created: "2025-01-08T00:46:57.841309451Z"
+    description: A Helm chart for Identity Server
+    digest: 73ac2f017b3e299e8feb1b154458a3fdf674398225c32e2198530e417f02fc79
+    name: identity-server
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/identity-server-0.12.0/identity-server-0.12.0.tgz
+    version: 0.12.0
   - apiVersion: v2
     appVersion: 1.3157.1
     created: "2025-01-07T22:05:26.496442485Z"
@@ -2734,6 +2764,16 @@ entries:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/identity-server-0.1.1/identity-server-0.1.1.tgz
     version: 0.1.1
   iot:
+  - apiVersion: v2
+    appVersion: 1.3159.1
+    created: "2025-01-08T00:46:58.003377268Z"
+    description: A Helm chart for Opus IoT
+    digest: a4a7aba97675a00fa3e272f5967383c7eacd4527617c4b28b1b68a609185a1b2
+    name: iot
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/iot-0.12.2/iot-0.12.2.tgz
+    version: 0.12.2
   - apiVersion: v2
     appVersion: 1.3157.1
     created: "2025-01-07T22:05:26.602862157Z"
@@ -5165,6 +5205,16 @@ entries:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/iot-0.1.0/iot-0.1.0.tgz
     version: 0.1.0
   opus:
+  - apiVersion: v2
+    appVersion: 1.3159.1
+    created: "2025-01-08T00:46:58.122204782Z"
+    description: A Helm chart for Opus
+    digest: 5aa96dcccc65b26a4b7bcfc60fd06c94d0f89846577ed1a1d104408d212be58b
+    name: opus
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/opus-0.12.2/opus-0.12.2.tgz
+    version: 0.12.2
   - apiVersion: v2
     appVersion: 1.3157.1
     created: "2025-01-07T22:05:26.73442993Z"
@@ -9188,6 +9238,16 @@ entries:
     version: 0.1.0
   website:
   - apiVersion: v2
+    appVersion: 1.3159.1
+    created: "2025-01-08T00:46:58.247344263Z"
+    description: A Helm chart for the Opus website
+    digest: 80d477164837526b83b9a35b14b990bd39b014da8b7bd9221bc59764a8f0c908
+    name: website
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.12.2/website-0.12.2.tgz
+    version: 0.12.2
+  - apiVersion: v2
     appVersion: 1.3157.1
     created: "2025-01-07T22:05:26.85694647Z"
     description: A Helm chart for the Opus website
@@ -11677,4 +11737,4 @@ entries:
     urls:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.1.1/website-0.1.1.tgz
     version: 0.1.1
-generated: "2025-01-07T22:05:26.861236562Z"
+generated: "2025-01-08T00:46:58.250991397Z"
