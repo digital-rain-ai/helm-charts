@@ -2975,6 +2975,16 @@ entries:
     version: 0.1.1
   iot:
   - apiVersion: v2
+    appVersion: 1.3252.1
+    created: "2025-01-28T17:37:20.919518803Z"
+    description: A Helm chart for Opus IoT
+    digest: 1b4a054cdca782198d64811475f92d38923642fccface339ac201d34d716085e
+    name: iot
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/iot-0.13.3/iot-0.13.3.tgz
+    version: 0.13.3
+  - apiVersion: v2
     appVersion: 1.3246.1
     created: "2025-01-28T02:42:36.144070127Z"
     description: A Helm chart for Opus IoT
@@ -5455,6 +5465,16 @@ entries:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/iot-0.1.0/iot-0.1.0.tgz
     version: 0.1.0
   opus:
+  - apiVersion: v2
+    appVersion: 1.3250.1
+    created: "2025-01-28T17:37:21.0413106Z"
+    description: A Helm chart for Opus
+    digest: dfe5d0459651334908f981e4f1663810a3f743c24b1be91c79704c6f4fc2ba91
+    name: opus
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/opus-0.13.3/opus-0.13.3.tgz
+    version: 0.13.3
   - apiVersion: v2
     appVersion: 1.3248.1
     created: "2025-01-28T12:56:12.507537875Z"
@@ -9657,6 +9677,16 @@ entries:
     version: 0.1.0
   website:
   - apiVersion: v2
+    appVersion: 1.3250.1
+    created: "2025-01-28T17:37:21.150523711Z"
+    description: A Helm chart for the Opus website
+    digest: 459255a2d1032749f57567ec89a00c8b22e9e26761bbc429d1fccb3c7c7aaf92
+    name: website
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.13.3/website-0.13.3.tgz
+    version: 0.13.3
+  - apiVersion: v2
     appVersion: 1.3248.1
     created: "2025-01-28T12:56:12.643422141Z"
     description: A Helm chart for the Opus website
@@ -12316,4 +12346,4 @@ entries:
     urls:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.1.1/website-0.1.1.tgz
     version: 0.1.1
-generated: "2025-01-28T12:56:12.645908716Z"
+generated: "2025-01-28T17:37:21.154514236Z"
