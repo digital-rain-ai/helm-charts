@@ -2975,6 +2975,16 @@ entries:
     version: 0.1.1
   iot:
   - apiVersion: v2
+    appVersion: 1.3246.1
+    created: "2025-01-28T02:42:36.144070127Z"
+    description: A Helm chart for Opus IoT
+    digest: f8b492518073eb274882c6ca14883ccc59767d16f4446268834d59d128d6c99b
+    name: iot
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/iot-0.13.1/iot-0.13.1.tgz
+    version: 0.13.1
+  - apiVersion: v2
     appVersion: 1.3240.1
     created: "2025-01-28T00:14:02.272666423Z"
     description: A Helm chart for Opus IoT
@@ -5445,6 +5455,16 @@ entries:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/iot-0.1.0/iot-0.1.0.tgz
     version: 0.1.0
   opus:
+  - apiVersion: v2
+    appVersion: 1.3246.1
+    created: "2025-01-28T02:42:36.317675977Z"
+    description: A Helm chart for Opus
+    digest: c490cd25df815209426a4babcfe97d78293b67d1798950ba262c93bd944eb6fb
+    name: opus
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/opus-0.13.1/opus-0.13.1.tgz
+    version: 0.13.1
   - apiVersion: v2
     appVersion: 1.3240.1
     created: "2025-01-28T00:14:02.379476139Z"
@@ -9627,6 +9647,16 @@ entries:
     version: 0.1.0
   website:
   - apiVersion: v2
+    appVersion: 1.3246.1
+    created: "2025-01-28T02:42:36.512557874Z"
+    description: A Helm chart for the Opus website
+    digest: e6b643b9172112b35d3a10d07372a9aa52dca415b2243c0a3e5ef8b3f7116d36
+    name: website
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.13.1/website-0.13.1.tgz
+    version: 0.13.1
+  - apiVersion: v2
     appVersion: 1.3240.1
     created: "2025-01-28T00:14:02.614785471Z"
     description: A Helm chart for the Opus website
@@ -12266,4 +12296,4 @@ entries:
     urls:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.1.1/website-0.1.1.tgz
     version: 0.1.1
-generated: "2025-01-28T00:14:02.618317178Z"
+generated: "2025-01-28T02:42:36.517112621Z"
