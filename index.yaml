@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   fluidx3d:
   - apiVersion: v2
+    appVersion: 1.3469.1
+    created: "2025-04-15T12:10:56.269140495Z"
+    description: A Helm chart for FluidX3D
+    digest: 059f3b8b85e2f78aca98ee86457dc9bcb11a4f630790bfb055de4fe1fc8fd6f9
+    name: fluidx3d
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/fluidx3d-0.16.0/fluidx3d-0.16.0.tgz
+    version: 0.16.0
+  - apiVersion: v2
     appVersion: 1.3397.1
     created: "2025-03-31T09:09:05.061598303Z"
     description: A Helm chart for FluidX3D
@@ -192,6 +202,16 @@ entries:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/fluidx3d-0.10.7/fluidx3d-0.10.7.tgz
     version: 0.10.7
   grafana:
+  - apiVersion: v2
+    appVersion: 1.3469.1
+    created: "2025-04-15T12:10:56.492169563Z"
+    description: A Helm chart for Grafana
+    digest: e161c212ec3514d8660d20232cb59d7c6488e75e928a90ed00a486a68b8dd6e9
+    name: grafana
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/grafana-0.16.0/grafana-0.16.0.tgz
+    version: 0.16.0
   - apiVersion: v2
     appVersion: 1.3352.1
     created: "2025-03-18T13:29:02.220937853Z"
@@ -573,6 +593,16 @@ entries:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/grafana-0.10.26/grafana-0.10.26.tgz
     version: 0.10.26
   identity-server:
+  - apiVersion: v2
+    appVersion: 1.3469.1
+    created: "2025-04-15T12:10:56.750740902Z"
+    description: A Helm chart for Identity Server
+    digest: c2aed310fea33ac8f25e393f474741181381ab435bfc56b47913de1d14bcf5d5
+    name: identity-server
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/identity-server-0.16.0/identity-server-0.16.0.tgz
+    version: 0.16.0
   - apiVersion: v2
     appVersion: 1.3437.1
     created: "2025-04-13T22:55:47.241330375Z"
@@ -3154,6 +3184,16 @@ entries:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/identity-server-0.1.1/identity-server-0.1.1.tgz
     version: 0.1.1
   iot:
+  - apiVersion: v2
+    appVersion: 1.3469.1
+    created: "2025-04-15T12:10:56.959292091Z"
+    description: A Helm chart for Opus IoT
+    digest: 604212c3ee3cf83d5f467cf2541cd562a92553f7ef874d26374b9900453a242b
+    name: iot
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/iot-0.16.0/iot-0.16.0.tgz
+    version: 0.16.0
   - apiVersion: v2
     appVersion: 1.3437.1
     created: "2025-04-13T22:55:47.360330973Z"
@@ -5795,6 +5835,16 @@ entries:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/iot-0.1.0/iot-0.1.0.tgz
     version: 0.1.0
   opus:
+  - apiVersion: v2
+    appVersion: 1.3469.1
+    created: "2025-04-15T12:10:57.202092946Z"
+    description: A Helm chart for Opus
+    digest: 32755ad272d1c3bbe0efe37e739fa2d911c2e771c5716a60064d8e064b72d5f8
+    name: opus
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/opus-0.16.0/opus-0.16.0.tgz
+    version: 0.16.0
   - apiVersion: v2
     appVersion: 1.3437.1
     created: "2025-04-13T22:55:47.478126341Z"
@@ -9116,6 +9166,15 @@ entries:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/opus-0.1.0/opus-0.1.0.tgz
     version: 0.1.0
   ravendb-cluster:
+  - apiVersion: v1
+    appVersion: "7.0"
+    created: "2025-04-15T12:10:57.439527568Z"
+    description: Chart for RavenDB Cluster
+    digest: 18b249626fd806eced169b2715411a535dab7bbfebb8d549993ec2c84145b161
+    name: ravendb-cluster
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/ravendb-cluster-0.16.0/ravendb-cluster-0.16.0.tgz
+    version: 0.16.0
   - apiVersion: v1
     appVersion: "6.0"
     created: "2025-03-18T13:29:02.930013993Z"
@@ -13014,4 +13073,4 @@ entries:
     urls:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.1.1/website-0.1.1.tgz
     version: 0.1.1
-generated: "2025-04-13T22:55:47.480636438Z"
+generated: "2025-04-15T12:10:57.444160826Z"
