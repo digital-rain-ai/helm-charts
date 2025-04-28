@@ -100,7 +100,15 @@ env:
 livenessProbe:
   httpGet:
     path: "/healthz/live"
+    scheme: HTTPS
+    httpHeaders:
+      - name: Host
+        value: "localhost"
 
 readinessProbe:
   httpGet:
     path: "/healthz/ready"
+    scheme: HTTPS
+    httpHeaders:
+      - name: Host
+        value: "localhost"
