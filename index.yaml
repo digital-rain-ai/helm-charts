@@ -595,6 +595,16 @@ entries:
   identity-server:
   - apiVersion: v2
     appVersion: 1.3509.1
+    created: "2025-05-06T23:06:40.15724828Z"
+    description: A Helm chart for Identity Server
+    digest: dee3e7507a80cb113150506b127d0d3fab4319e218edec97b2b6056a433b3bd5
+    name: identity-server
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/identity-server-0.17.3/identity-server-0.17.3.tgz
+    version: 0.17.3
+  - apiVersion: v2
+    appVersion: 1.3509.1
     created: "2025-05-06T22:15:26.954072082Z"
     description: A Helm chart for Identity Server
     digest: 085cb5917fd150a4f64d65504fe3efc36bc78de6213dcac14c3611015347191d
@@ -3214,6 +3224,16 @@ entries:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/identity-server-0.1.1/identity-server-0.1.1.tgz
     version: 0.1.1
   iot:
+  - apiVersion: v2
+    appVersion: 1.3509.1
+    created: "2025-05-06T23:06:40.307077876Z"
+    description: A Helm chart for Opus IoT
+    digest: a5246a9a4e06cbb34fb6a1b73bc57fa1f81baf527c9b473101e406f67e7a5a97
+    name: iot
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/iot-0.17.3/iot-0.17.3.tgz
+    version: 0.17.3
   - apiVersion: v2
     appVersion: 1.3509.1
     created: "2025-05-06T22:15:27.131812049Z"
@@ -5895,6 +5915,16 @@ entries:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/iot-0.1.0/iot-0.1.0.tgz
     version: 0.1.0
   opus:
+  - apiVersion: v2
+    appVersion: 1.3509.1
+    created: "2025-05-06T23:06:40.43150695Z"
+    description: A Helm chart for Opus
+    digest: d5716271b02e2a0dd9f07fcce7c7c8414e3b034e5e7d469a091def29ad7b4c0f
+    name: opus
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/opus-0.17.3/opus-0.17.3.tgz
+    version: 0.17.3
   - apiVersion: v2
     appVersion: 1.3509.1
     created: "2025-05-06T22:15:27.288519582Z"
@@ -13163,4 +13193,4 @@ entries:
     urls:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.1.1/website-0.1.1.tgz
     version: 0.1.1
-generated: "2025-05-06T22:15:27.292751896Z"
+generated: "2025-05-06T23:06:40.435608595Z"
