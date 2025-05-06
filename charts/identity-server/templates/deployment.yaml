@@ -46,6 +46,10 @@ spec:
               path: {{ .Values.startupProbe.httpGet.path }}
               port: https
               scheme: HTTPS
+              {{- with .Values.startupProbe.httpGet.httpHeaders }}
+              httpHeaders:
+                {{- toYaml . | nindent 16 }}
+              {{- end }}
             failureThreshold: {{ .Values.startupProbe.failureThreshold }}
             periodSeconds: {{ .Values.startupProbe.periodSeconds }}
           {{- end }}
@@ -54,11 +58,19 @@ spec:
               path: {{ .Values.livenessProbe.httpGet.path }}
               port: https
               scheme: HTTPS
+              {{- with .Values.livenessProbe.httpGet.httpHeaders }}
+              httpHeaders:
+                {{- toYaml . | nindent 16 }}
+              {{- end }}
           readinessProbe:
             httpGet:
               path: {{ .Values.readinessProbe.httpGet.path }}
               port: https
               scheme: HTTPS
+              {{- with .Values.readinessProbe.httpGet.httpHeaders }}
+              httpHeaders:
+                {{- toYaml . | nindent 16 }}
+              {{- end }}
           {{- with .Values.volumeMounts }}
           volumeMounts:
             {{- toYaml . | nindent 12 }}
