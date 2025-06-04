@@ -3,7 +3,7 @@ storageSize: 5Gi
 storageClassName:
 useTempLocalStorage:
 tempLocalStorageSize: 5Gi
-ravenImageTag: "1.3529.1"
+ravenImageTag: "1.3582.2"
 imagePullPolicy: IfNotPresent
 ingressClassName: nginx
 
