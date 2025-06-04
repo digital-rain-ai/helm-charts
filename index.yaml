@@ -3265,6 +3265,16 @@ entries:
     version: 0.1.1
   iot:
   - apiVersion: v2
+    appVersion: 1.3582.2
+    created: "2025-06-04T22:34:51.661111769Z"
+    description: A Helm chart for Opus IoT
+    digest: a07ce4f6be48fbf4ea39d3b376c0a81127e925c15cc1b4959ecf2db37bbc5081
+    name: iot
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/iot-0.17.8/iot-0.17.8.tgz
+    version: 0.17.8
+  - apiVersion: v2
     appVersion: 1.3546.1
     created: "2025-05-25T22:44:56.865809713Z"
     description: A Helm chart for Opus IoT
@@ -5995,6 +6005,16 @@ entries:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/iot-0.1.0/iot-0.1.0.tgz
     version: 0.1.0
   opus:
+  - apiVersion: v2
+    appVersion: 1.3582.2
+    created: "2025-06-04T22:34:51.832523192Z"
+    description: A Helm chart for Opus
+    digest: a23ef908887136653d0c4c3a21c93f4baa2dc5e64fdf22b5800b9953e4da6cf4
+    name: opus
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/opus-0.17.13/opus-0.17.13.tgz
+    version: 0.17.13
   - apiVersion: v2
     appVersion: 1.3575.2
     created: "2025-06-03T01:40:40.055041661Z"
@@ -9456,6 +9476,15 @@ entries:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/opus-0.1.0/opus-0.1.0.tgz
     version: 0.1.0
   ravendb-cluster:
+  - apiVersion: v1
+    appVersion: "7.0"
+    created: "2025-06-04T22:34:52.051140052Z"
+    description: Chart for RavenDB Cluster
+    digest: 8976a489eb38372fdb0ee4395439fc93cd5a8ff926ff65b88edea2da4992f77f
+    name: ravendb-cluster
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/ravendb-cluster-0.16.2/ravendb-cluster-0.16.2.tgz
+    version: 0.16.2
   - apiVersion: v1
     appVersion: "7.0"
     created: "2025-05-09T18:21:18.71035694Z"
@@ -13372,4 +13401,4 @@ entries:
     urls:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.1.1/website-0.1.1.tgz
     version: 0.1.1
-generated: "2025-06-03T01:40:40.057003596Z"
+generated: "2025-06-04T22:34:52.05384041Z"
