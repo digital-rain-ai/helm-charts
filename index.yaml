@@ -594,6 +594,16 @@ entries:
     version: 0.10.26
   identity-server:
   - apiVersion: v2
+    appVersion: 1.3646.1
+    created: "2025-07-02T09:56:26.01002416Z"
+    description: A Helm chart for Identity Server
+    digest: b24b3dbf151df373ced88395997b0f11dbe4fe4f5745895a6498e7e61968b91d
+    name: identity-server
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/identity-server-0.17.10/identity-server-0.17.10.tgz
+    version: 0.17.10
+  - apiVersion: v2
     appVersion: 1.3604.3
     created: "2025-06-18T00:27:13.589442603Z"
     description: A Helm chart for Identity Server
@@ -3284,6 +3294,16 @@ entries:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/identity-server-0.1.1/identity-server-0.1.1.tgz
     version: 0.1.1
   iot:
+  - apiVersion: v2
+    appVersion: 1.3646.1
+    created: "2025-07-02T09:56:26.206978185Z"
+    description: A Helm chart for Opus IoT
+    digest: f40020f0611803231a463ac941629a463bb88d441725c800c873a9a7b3b35e7e
+    name: iot
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/iot-0.17.11/iot-0.17.11.tgz
+    version: 0.17.11
   - apiVersion: v2
     appVersion: 1.3604.3
     created: "2025-06-18T00:27:13.713365189Z"
@@ -6045,6 +6065,16 @@ entries:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/iot-0.1.0/iot-0.1.0.tgz
     version: 0.1.0
   opus:
+  - apiVersion: v2
+    appVersion: 1.3646.1
+    created: "2025-07-02T09:56:26.363830713Z"
+    description: A Helm chart for Opus
+    digest: 4450f7f54b62abc26e42b5797f76628fdccd53220e89094d9769b2b607af574b
+    name: opus
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/opus-0.17.23/opus-0.17.23.tgz
+    version: 0.17.23
   - apiVersion: v2
     appVersion: 1.3634.1
     created: "2025-06-25T09:47:20.740896079Z"
@@ -13531,4 +13561,4 @@ entries:
     urls:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.1.1/website-0.1.1.tgz
     version: 0.1.1
-generated: "2025-06-25T09:47:20.744297031Z"
+generated: "2025-07-02T09:56:26.366709365Z"
