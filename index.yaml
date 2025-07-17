@@ -594,6 +594,16 @@ entries:
     version: 0.10.26
   identity-server:
   - apiVersion: v2
+    appVersion: 1.3703.2
+    created: "2025-07-17T10:27:12.935120421Z"
+    description: A Helm chart for Identity Server
+    digest: 6b6b6accffd8629c4379237421dcdac72736a81ef032e12b78d5a5d04cb363e2
+    name: identity-server
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/identity-server-0.17.12/identity-server-0.17.12.tgz
+    version: 0.17.12
+  - apiVersion: v2
     appVersion: 1.3694.2
     created: "2025-07-15T23:32:53.9674955Z"
     description: A Helm chart for Identity Server
@@ -3304,6 +3314,16 @@ entries:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/identity-server-0.1.1/identity-server-0.1.1.tgz
     version: 0.1.1
   iot:
+  - apiVersion: v2
+    appVersion: 1.3703.2
+    created: "2025-07-17T10:27:13.132482111Z"
+    description: A Helm chart for Opus IoT
+    digest: 7ec5975b58177ba6834f3510c7542ae7f9a5d7462bf8ff0e148fb1ae05b00ece
+    name: iot
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/iot-0.17.13/iot-0.17.13.tgz
+    version: 0.17.13
   - apiVersion: v2
     appVersion: 1.3694.2
     created: "2025-07-15T23:32:54.114901007Z"
@@ -6085,6 +6105,16 @@ entries:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/iot-0.1.0/iot-0.1.0.tgz
     version: 0.1.0
   opus:
+  - apiVersion: v2
+    appVersion: 1.3703.2
+    created: "2025-07-17T10:27:13.341320647Z"
+    description: A Helm chart for Opus
+    digest: 6268c4f1ba3e129c0957cd299fb20eb3b1fa4125465c9256906a3304e4fa5dae
+    name: opus
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/opus-0.17.27/opus-0.17.27.tgz
+    version: 0.17.27
   - apiVersion: v2
     appVersion: 1.3694.2
     created: "2025-07-15T23:32:54.22806979Z"
@@ -13611,4 +13641,4 @@ entries:
     urls:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.1.1/website-0.1.1.tgz
     version: 0.1.1
-generated: "2025-07-15T23:32:54.230726244Z"
+generated: "2025-07-17T10:27:13.343980617Z"
