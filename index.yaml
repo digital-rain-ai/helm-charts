@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   fluidx3d:
   - apiVersion: v2
+    appVersion: 1.3768.1
+    created: "2025-09-01T19:53:17.599266562Z"
+    description: A Helm chart for FluidX3D
+    digest: 3bfb3022e836dd636632d07655fd635e6e1fb97b2e5e30a67f34bdf287970cff
+    name: fluidx3d
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/fluidx3d-0.19.1/fluidx3d-0.19.1.tgz
+    version: 0.19.1
+  - apiVersion: v2
     appVersion: 1.3748.1
     created: "2025-08-19T20:44:27.498613379Z"
     description: A Helm chart for FluidX3D
@@ -13847,4 +13857,4 @@ entries:
     urls:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.1.1/website-0.1.1.tgz
     version: 0.1.1
-generated: "2025-09-01T19:52:18.73981052Z"
+generated: "2025-09-01T19:53:17.601361643Z"
