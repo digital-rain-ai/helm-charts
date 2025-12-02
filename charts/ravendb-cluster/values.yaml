@@ -20,6 +20,10 @@ imagePullSecrets: []
 
 topologySpreadConstraints: []
 
+nodesWithoutPersistentStorage: []
+
+nodesWithBackupTemp: []
+
 # Server-wide Backup configuration
 backupEnabled: false
 backupTaskName: "Periodic Backup"
