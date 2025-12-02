@@ -95,6 +95,11 @@ spec:
         - name: RAVEN_PublicServerUrl_Tcp
           value: "tcp://{{ . | lower }}-tcp.{{$.Values.domain}}:443"
 
+        {{- if and (has . $.Values.nodesWithBackupTemp) ( $.Values.backupTempStorageClassName ) }}
+        - name: RAVEN_Backup_TempPath
+          value: "/RavenBackupTemp/ravendb-backup-temp-{{ . | lower }}"
+        {{- end }}
+
         {{- if ( $.Values.useTempLocalStorage )}}
         - name: RAVEN_Storage_TempPath
           value: "/RavenTemp/ravendb-storage-temp-{{ . | lower }}"
@@ -121,7 +126,11 @@ spec:
             mountPath: /usr/ravendb
           - name: ravendb-certs
             mountPath: /ravendb/certs
-          {{- if ( $.Values.useTempLocalStorage )}}
+          {{- if and (has . $.Values.nodesWithBackupTemp) ( $.Values.backupTempStorageClassName ) }}
+          - name: ravendb-backup-temp
+            mountPath: /RavenBackupTemp/
+          {{- end }}
+          {{- if and (not (has . $.Values.nodesWithoutPersistentStorage)) ( $.Values.useTempLocalStorage )}}
           - name: ravendb-temp-local-storage
             mountPath: /RavenTemp/
           {{- end }}
@@ -139,8 +148,19 @@ spec:
         - name: ravendb-setup-package
           secret:
             secretName: ravendb-setup-package
-        {{- if ( $.Values.useTempLocalStorage )}}
+        {{- if and (not (has . $.Values.nodesWithoutPersistentStorage)) ( $.Values.useTempLocalStorage )}}
         - name: ravendb-temp-local-storage
+          ephemeral:
+            volumeClaimTemplate:
+              spec:
+                accessModes: [ "ReadWriteOnce" ]
+                storageClassName: "local-disk"
+                resources:
+                  requests:
+                    storage: {{ $.Values.tempLocalStorageSize }}
+        {{- end }}
+        {{- if has . $.Values.nodesWithoutPersistentStorage }}
+        - name: ravendb
           ephemeral:
             volumeClaimTemplate:
               spec:
@@ -152,6 +172,7 @@ spec:
         {{- end }}
 
   volumeClaimTemplates:
+    {{- if not (has . $.Values.nodesWithoutPersistentStorage) }}
     - metadata:
         name: ravendb
       spec:
@@ -160,5 +181,16 @@ spec:
         resources:
           requests:
             storage: {{ $.Values.storageSize }}
+    {{- end }}
+    {{- if and (has . $.Values.nodesWithBackupTemp) ( $.Values.backupTempStorageClassName ) }}
+    - metadata:
+        name: ravendb-backup-temp
+      spec:
+        accessModes: ["ReadWriteOnce"]
+        storageClassName: {{ $.Values.backupTempStorageClassName }}
+        resources:
+          requests:
+            storage: {{ $.Values.backupTempStorageSize }}
+    {{- end }}
 ---
 {{- end }}
