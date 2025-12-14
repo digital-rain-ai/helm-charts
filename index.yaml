@@ -6456,6 +6456,16 @@ entries:
     version: 0.1.0
   opus:
   - apiVersion: v2
+    appVersion: 1.4072.1
+    created: "2025-12-14T22:21:17.457573649Z"
+    description: A Helm chart for Opus
+    digest: 1f5038220ae50fdf5a310c59f8a06a7390b6bceed528e6a84ef5a56613f5642e
+    name: opus
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/opus-0.22.12/opus-0.22.12.tgz
+    version: 0.22.12
+  - apiVersion: v2
     appVersion: 1.4070.1
     created: "2025-12-14T21:28:53.796490086Z"
     description: A Helm chart for Opus
@@ -14530,4 +14540,4 @@ entries:
     urls:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.1.1/website-0.1.1.tgz
     version: 0.1.1
-generated: "2025-12-14T21:28:53.798829717Z"
+generated: "2025-12-14T22:21:17.45993171Z"
