@@ -654,6 +654,16 @@ entries:
     version: 0.10.26
   identity-server:
   - apiVersion: v2
+    appVersion: 1.4776.1
+    created: "2026-09-23T08:51:59.181132513Z"
+    description: A Helm chart for Identity Server
+    digest: b4d8e5e010d22b46b1be516c2f7170481f64228bedb2eb349cfb3d805eeaee55
+    name: identity-server
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/identity-server-0.27.0/identity-server-0.27.0.tgz
+    version: 0.27.0
+  - apiVersion: v2
     appVersion: 1.4712.1
     created: "2026-08-24T17:19:45.19701135Z"
     description: A Helm chart for Identity Server
@@ -6685,6 +6695,16 @@ entries:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/iot-0.1.0/iot-0.1.0.tgz
     version: 0.1.0
   opus:
+  - apiVersion: v2
+    appVersion: 1.4776.1
+    created: "2026-09-23T08:51:59.347446592Z"
+    description: A Helm chart for Opus
+    digest: 084490f02b1b1d7fa1fc237415917fd3fb05360b5464d346b92cc36cc7535ba0
+    name: opus
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/opus-0.27.0/opus-0.27.0.tgz
+    version: 0.27.0
   - apiVersion: v2
     appVersion: 1.4717.1
     created: "2026-08-27T13:51:09.652189829Z"
@@ -15356,4 +15376,4 @@ entries:
     urls:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.1.1/website-0.1.1.tgz
     version: 0.1.1
-generated: "2026-08-27T13:51:09.656992828Z"
+generated: "2026-09-23T08:51:59.350684676Z"
