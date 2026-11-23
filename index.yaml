@@ -3615,6 +3615,16 @@ entries:
     version: 0.1.1
   iot:
   - apiVersion: v2
+    appVersion: 1.4955.1
+    created: "2026-11-23T22:27:19.467734279Z"
+    description: A Helm chart for Opus IoT
+    digest: 36dd9531f8682b8a0c1ee462bdc732de97dd33711444771c94ffa4d6411aae7e
+    name: iot
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/iot-0.27.0/iot-0.27.0.tgz
+    version: 0.27.0
+  - apiVersion: v2
     appVersion: 1.4703.1
     created: "2026-08-22T10:05:52.50658446Z"
     description: A Helm chart for Opus IoT
@@ -6705,6 +6715,16 @@ entries:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/iot-0.1.0/iot-0.1.0.tgz
     version: 0.1.0
   opus:
+  - apiVersion: v2
+    appVersion: 1.4955.1
+    created: "2026-11-23T22:27:19.621500521Z"
+    description: A Helm chart for Opus
+    digest: 18f37bfe3bc6d8bd4515d3b9c21c25d174767be8e5f3bb9ba28987d37d2c2d37
+    name: opus
+    type: application
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/opus-0.27.25/opus-0.27.25.tgz
+    version: 0.27.25
   - apiVersion: v2
     appVersion: 1.4931.1
     created: "2026-11-18T08:43:19.49135343Z"
@@ -11568,6 +11588,15 @@ entries:
   ravendb-cluster:
   - apiVersion: v1
     appVersion: "7.2"
+    created: "2026-11-23T22:27:19.834695369Z"
+    description: Chart for RavenDB Cluster
+    digest: bb7b9ff49b42cab8e025bec6bba37b12c237e0d1fb57acabba145210b40aa88d
+    name: ravendb-cluster
+    urls:
+    - https://github.com/digital-rain-ai/helm-charts/releases/download/ravendb-cluster-0.26.2/ravendb-cluster-0.26.2.tgz
+    version: 0.26.2
+  - apiVersion: v1
+    appVersion: "7.2"
     created: "2026-10-20T09:20:46.510424913Z"
     description: Chart for RavenDB Cluster
     digest: 254ce95a52aaeebf3ccd2887cfbc1682d5cf28737623c7b009f845e1f424faaf
@@ -15635,4 +15664,4 @@ entries:
     urls:
     - https://github.com/digital-rain-ai/helm-charts/releases/download/website-0.1.1/website-0.1.1.tgz
     version: 0.1.1
-generated: "2026-11-18T08:43:19.494397427Z"
+generated: "2026-11-23T22:27:19.838105999Z"
